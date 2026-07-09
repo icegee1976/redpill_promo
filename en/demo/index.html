@@ -65,7 +65,37 @@
       </div>
       <div class="field">
         <label for="f-tz">Your timezone <span class="req">*</span></label>
-        <input id="f-tz" name="tz" type="text" required placeholder="e.g. UTC+8 Taipei">
+        <select id="f-tz" name="tz" required>
+          <option value="" disabled selected>Select your timezone&hellip;</option>
+          <option value="UTC-12">UTC&minus;12 &mdash; Baker Island</option>
+          <option value="UTC-11">UTC&minus;11 &mdash; Pago Pago</option>
+          <option value="UTC-10">UTC&minus;10 &mdash; Honolulu</option>
+          <option value="UTC-09">UTC&minus;9 &mdash; Anchorage</option>
+          <option value="UTC-08">UTC&minus;8 &mdash; Los Angeles, Vancouver</option>
+          <option value="UTC-07">UTC&minus;7 &mdash; Denver, Phoenix</option>
+          <option value="UTC-06">UTC&minus;6 &mdash; Chicago, Mexico City</option>
+          <option value="UTC-05">UTC&minus;5 &mdash; New York, Toronto</option>
+          <option value="UTC-04">UTC&minus;4 &mdash; Santiago, Halifax</option>
+          <option value="UTC-03">UTC&minus;3 &mdash; S&atilde;o Paulo, Buenos Aires</option>
+          <option value="UTC-02">UTC&minus;2 &mdash; Fernando de Noronha</option>
+          <option value="UTC-01">UTC&minus;1 &mdash; Azores</option>
+          <option value="UTC+00">UTC&plusmn;0 &mdash; London, Lisbon</option>
+          <option value="UTC+01">UTC+1 &mdash; Paris, Berlin, Lagos</option>
+          <option value="UTC+02">UTC+2 &mdash; Cairo, Johannesburg, Athens</option>
+          <option value="UTC+03">UTC+3 &mdash; Moscow, Istanbul, Nairobi</option>
+          <option value="UTC+04">UTC+4 &mdash; Dubai</option>
+          <option value="UTC+05">UTC+5 &mdash; Karachi</option>
+          <option value="UTC+05:30">UTC+5:30 &mdash; India (Delhi, Mumbai)</option>
+          <option value="UTC+06">UTC+6 &mdash; Dhaka, Almaty</option>
+          <option value="UTC+07">UTC+7 &mdash; Bangkok, Jakarta, Hanoi</option>
+          <option value="UTC+08">UTC+8 &mdash; Taipei, Hong Kong, Singapore, Beijing</option>
+          <option value="UTC+09">UTC+9 &mdash; Tokyo, Seoul</option>
+          <option value="UTC+09:30">UTC+9:30 &mdash; Adelaide</option>
+          <option value="UTC+10">UTC+10 &mdash; Sydney, Brisbane</option>
+          <option value="UTC+11">UTC+11 &mdash; Noumea</option>
+          <option value="UTC+12">UTC+12 &mdash; Auckland</option>
+          <option value="UTC+13">UTC+13 &mdash; Apia, Nuku&rsquo;alofa</option>
+        </select>
       </div>
       <div class="field">
         <label for="f-notes">Notes</label>
@@ -96,6 +126,12 @@
   if (!form) return;
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+    /* Native constraint validation: email format, required fields, timezone selection.
+       reportValidity() shows the browser's own error bubble on the first invalid field. */
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
     function v(id) {
       var el = document.getElementById(id);
       return el && el.value ? el.value.trim() : '-';
