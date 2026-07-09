@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neocore — Markerless Motion Capture by Red Pill Lab</title>
+<meta name="description" content="Neocore: markerless AI motion capture from standard webcams. Neocore RT for Physical AI and humanoid robotics; Neocore for VTuber agencies, virtual production and game animation. Distributed by Zukunft Works Ltd.">
+<meta property="og:title" content="Neocore — Markerless Motion Capture by Red Pill Lab">
+<meta property="og:description" content="Real-time AI motion capture with no suits, no markers, no gloves. Neocore RT for Physical AI; Neocore for VTuber agencies, virtual production and game animation.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Neocore — Red Pill Lab">
+<!-- og:url / og:image and absolute canonical/hreflang URLs pending domain decision (HANDOFF §8 #4); replace relative hrefs below once the domain is set -->
+<link rel="canonical" href="./">
+<link rel="alternate" hreflang="en" href="./">
+<link rel="alternate" hreflang="x-default" href="../">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="wordmark" href="./">NEO<span>CORE</span></a>
+    <nav class="topnav">
+      <a href="neocore-rt/">Neocore RT</a>
+      <a href="neocore/">Neocore</a>
+      <a class="contact" href="mailto:info@zukunftworks.co">info@zukunftworks.co</a>
+    </nav>
+    <span class="lang" title="繁體中文 / 日本語 versions in preparation">EN</span>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Red Pill Lab &middot; Markerless Motion Capture</p>
+      <h1>Capture real human motion with a few webcams &mdash; from game engines to humanoid robots.</h1>
+      <p class="sub">Neocore is real-time AI motion capture with <strong>no suits, no markers, no gloves</strong>. Performers work in street clothing while standard RGB cameras and one RTX workstation do the tracking.</p>
+      <div class="fork">
+        <a class="fork-card fork-rt" href="neocore-rt/"><b>Neocore RT <span class="arr">&rarr;</span></b><small>Training data &amp; teleoperation for Physical AI</small></a>
+        <a class="fork-card fork-std" href="neocore/"><b>Neocore <span class="arr">&rarr;</span></b><small>VTuber agencies, virtual production &amp; game animation</small></a>
+      </div>
+    </div>
+    <figure class="hero-art" aria-hidden="true">
+      <!-- demo-video slot (004 SPEC #7): when approved footage exists, replace this SVG with
+           <video src="../assets/media/neocore-demo.mp4" muted autoplay loop playsinline></video>
+           (local file only — no external dependencies). Layout stays unchanged. -->
+      <svg viewBox="0 0 640 440" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#1C2630" stroke-width="1">
+          <polygon points="120,344 520,344 600,420 40,420" fill="none"/>
+          <line x1="170" y1="344" x2="110" y2="420"/>
+          <line x1="245" y1="344" x2="215" y2="420"/>
+          <line x1="320" y1="344" x2="320" y2="420"/>
+          <line x1="395" y1="344" x2="425" y2="420"/>
+          <line x1="470" y1="344" x2="530" y2="420"/>
+          <line x1="100" y1="363" x2="540" y2="363"/>
+          <line x1="76" y1="386" x2="564" y2="386"/>
+          <line x1="52" y1="409" x2="588" y2="409"/>
+        </g>
+        <g stroke="#00E5A0" stroke-width="1" stroke-dasharray="4 6" opacity=".45">
+          <line x1="78" y1="72" x2="292" y2="150"/>
+          <line x1="78" y1="72" x2="304" y2="230"/>
+          <line x1="562" y1="72" x2="348" y2="150"/>
+          <line x1="562" y1="72" x2="336" y2="230"/>
+          <line x1="46" y1="248" x2="286" y2="196"/>
+          <line x1="594" y1="248" x2="354" y2="196"/>
+        </g>
+        <g fill="#10161D" stroke="#00E5A0" stroke-width="1.5">
+          <rect x="58" y="58" width="30" height="20" rx="4"/><circle cx="82" cy="68" r="4.5"/>
+          <rect x="552" y="58" width="30" height="20" rx="4"/><circle cx="558" cy="68" r="4.5"/>
+          <rect x="26" y="236" width="30" height="20" rx="4"/><circle cx="50" cy="246" r="4.5"/>
+          <rect x="584" y="236" width="30" height="20" rx="4"/><circle cx="590" cy="246" r="4.5"/>
+        </g>
+        <g stroke="#00E5A0" stroke-width="2.5" stroke-linecap="round" fill="none">
+          <circle cx="320" cy="92" r="18" stroke-width="2"/>
+          <line x1="320" y1="110" x2="320" y2="130"/>
+          <line x1="286" y1="136" x2="354" y2="136"/>
+          <line x1="320" y1="136" x2="320" y2="210"/>
+          <line x1="297" y1="210" x2="343" y2="210"/>
+          <line x1="286" y1="136" x2="261" y2="180"/>
+          <line x1="261" y1="180" x2="250" y2="224"/>
+          <line x1="354" y1="136" x2="379" y2="180"/>
+          <line x1="379" y1="180" x2="390" y2="224"/>
+          <line x1="297" y1="210" x2="289" y2="276"/>
+          <line x1="289" y1="276" x2="285" y2="344"/>
+          <line x1="343" y1="210" x2="351" y2="276"/>
+          <line x1="351" y1="276" x2="355" y2="344"/>
+        </g>
+        <g fill="#0A0E12" stroke="#00E5A0" stroke-width="2">
+          <circle cx="320" cy="136" r="4.5"/><circle cx="286" cy="136" r="4.5"/><circle cx="354" cy="136" r="4.5"/>
+          <circle cx="261" cy="180" r="4.5"/><circle cx="379" cy="180" r="4.5"/>
+          <circle cx="250" cy="224" r="4.5"/><circle cx="390" cy="224" r="4.5"/>
+          <circle cx="297" cy="210" r="4.5"/><circle cx="343" cy="210" r="4.5"/>
+          <circle cx="289" cy="276" r="4.5"/><circle cx="351" cy="276" r="4.5"/>
+          <circle cx="285" cy="344" r="4.5"/><circle cx="355" cy="344" r="4.5"/>
+        </g>
+        <g stroke="#00E5A0" stroke-width="1.3" stroke-linecap="round" opacity=".85">
+          <line x1="390" y1="224" x2="384" y2="238"/>
+          <line x1="390" y1="224" x2="391" y2="240"/>
+          <line x1="390" y1="224" x2="398" y2="237"/>
+          <line x1="390" y1="224" x2="403" y2="231"/>
+          <line x1="390" y1="224" x2="380" y2="231"/>
+        </g>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= NEOCORE RT TEASER ================= -->
+<section class="rt" id="rt">
+  <div class="wrap">
+    <p class="kicker">Neocore RT &middot; For Physical AI &amp; Robotics Teams</p>
+    <h2>The bottleneck in Physical AI is motion data. Collect it without suits.</h2>
+    <p class="lede">Neocore RT feeds real-world motion into imitation learning and teleoperation pipelines, captured from standard RGB cameras &mdash; with operators in <em>street clothes behaving like real workers</em>, not suited-up rehearsers.</p>
+
+    <div class="specgrid">
+      <div class="spec">
+        <div class="num">27<span>-joint</span></div>
+        <div class="lbl"><b>Hand &amp; finger tracking per hand</b> &mdash; native to the system, not a bolt-on glove. Finger-level demonstration data for dexterity learning.</div>
+      </div>
+      <div class="spec">
+        <div class="num">&lt;250<span> ms</span></div>
+        <div class="lbl"><b>End-to-end teleoperation latency</b> &mdash; from camera to robot control loop, with zero gear on the operator.</div>
+      </div>
+      <div class="spec">
+        <div class="num">cm<span>-class</span></div>
+        <div class="lbl"><b>Absolute position accuracy</b> &mdash; sufficient for most robotic learning tasks. If you need sub-millimetre, optical still wins.</div>
+      </div>
+      <div class="spec">
+        <div class="num">Skeleton<span>-only output</span></div>
+        <div class="lbl"><b>Privacy mode</b> &mdash; anonymised skeleton stream only; raw video can be discarded at the edge for compliance use.</div>
+      </div>
+    </div>
+
+    <div class="claim">
+      <p>The only markerless mocap brand to date featured in back-to-back NVIDIA keynote moments &mdash; the Computex 2025 launch and the GTC Taipei 2026 opening.</p>
+      <p class="src">As seen at the NVIDIA Computex 2025 keynote and the NVIDIA GTC Taipei 2026 opening keynote (June 2026) &mdash; both publicly documented.</p>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn btn-rt" href="neocore-rt/">Explore Neocore RT<small>Specifications, recognition &amp; evaluation path</small></a>
+      <p class="cta-note">A typical evaluation starts with a one-day pilot: real skeleton data captured in your environment, on your task, with your operators.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NEOCORE TEASER ================= -->
+<section class="std" id="neocore">
+  <div class="wrap">
+    <p class="kicker">Neocore &middot; For VTuber Agencies, Virtual Production &amp; Game Animation</p>
+    <h2>No wearables, no markers. A few webcams, one PC, your whole cast.</h2>
+    <p class="lede">Built with multi-performer stages in mind &mdash; VTuber agencies planning 3D lives, virtual production studios, game animation teams. Performers wear <em>whatever they walked in with</em>; one room and one workstation capture the whole cast.</p>
+
+    <p class="recipe">5&ndash;6 webcams <span>+</span> 1 RTX workstation <span>=</span> real-time mocap for 3&ndash;4 performers</p>
+    <p class="pipe-line"><b>Take Recorder &rarr; FBX export</b> &middot; <b>LiveLink &rarr; Unreal Engine 5</b> &middot; <b>Unity plugin</b> (com.redpill.neocore) &middot; <b>Warudo plugin</b></p>
+
+    <div class="cta-row">
+      <a class="btn btn-red" href="neocore/">Explore Neocore<small>Full specs, pipeline &amp; honest comparison</small></a>
+      <p class="cta-note">Officially tested up to 10 &times; 10 m with 8 performers (more cameras and compute required) &mdash; details on the product page.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-cta">
+      <div>
+        <h2>See Neocore live.</h2>
+        <p>Book a one-hour Neocore demo through Zukunft Works Ltd., Taipei &mdash; pick your times, we confirm by reply. Evaluating Neocore RT? Write with your use case (capture space, operator count, target pipeline) and get a concrete evaluation path back. Pricing is by quotation.</p>
+      </div>
+      <div class="btns">
+        <a class="btn btn-red" href="demo/">Book a 1-hour Neocore demo</a>
+        <a class="mail" href="mailto:info@zukunftworks.co?subject=Neocore%20RT%20evaluation">Neocore RT evaluation &amp; quotes &mdash; info@zukunftworks.co</a>
+      </div>
+    </div>
+    <div class="foot-meta">
+      <div class="brands">
+        <b>Red Pill Lab</b> &mdash; developer, Taiwan<br>
+        <b>Zukunft Works Ltd.</b> &mdash; distributor, Taipei<br>
+        &copy; 2026 Red Pill Lab &middot; Zukunft Works Ltd.
+      </div>
+      <div class="legal">
+        NVIDIA, Unreal Engine, Unity and Warudo are trademarks of their respective owners. References describe publicly documented demonstrations and integrations and do not imply endorsement. Specifications reflect the Neocore deployment guide and the Neocore RT Procurement &amp; Integration Brief (June 2026).
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

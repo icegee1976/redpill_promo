@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Neocore Demo — Red Pill Lab</title>
+<meta name="description" content="Book a one-hour Neocore demo through Zukunft Works Ltd. Tell us who you are and when suits you; your slot is confirmed by reply.">
+<!-- absolute canonical URL pending domain decision (HANDOFF §8 #4) -->
+<link rel="canonical" href="./">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body class="stub-light">
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="wordmark" href="../">NEO<span>CORE</span></a>
+    <nav class="topnav">
+      <a href="../neocore-rt/">Neocore RT</a>
+      <a href="../neocore/">Neocore</a>
+      <a class="contact" href="mailto:info@zukunftworks.co">info@zukunftworks.co</a>
+    </nav>
+    <span class="lang" title="繁體中文 / 日本語 versions in preparation">EN</span>
+  </div>
+</header>
+
+<main class="stub-main">
+  <div class="wrap">
+    <p class="kicker">Neocore &middot; Live Demo</p>
+    <h2>Book a one-hour Neocore demo.</h2>
+    <p class="lede">Tell us who you are and when suits you. Submitting opens your email app with the booking details addressed to Zukunft Works Ltd. &mdash; send it as is, and your time slot is confirmed by reply.</p>
+
+    <form class="form" id="booking">
+      <div class="grid2">
+        <div class="field">
+          <label for="f-name">Name <span class="req">*</span></label>
+          <input id="f-name" name="name" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="f-email">Email <span class="req">*</span></label>
+          <input id="f-email" name="email" type="email" required autocomplete="email">
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-org">Company / channel</label>
+        <input id="f-org" name="org" type="text" autocomplete="organization">
+      </div>
+      <div class="field">
+        <label for="f-topic">What do you want to see?</label>
+        <select id="f-topic" name="topic">
+          <option>VTuber / agency 3D live</option>
+          <option>Virtual production</option>
+          <option>Game animation</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="grid2">
+        <div class="field">
+          <label for="f-t1">Preferred time #1 <span class="req">*</span></label>
+          <input id="f-t1" name="time1" type="datetime-local" required>
+        </div>
+        <div class="field">
+          <label for="f-t2">Preferred time #2</label>
+          <input id="f-t2" name="time2" type="datetime-local">
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-tz">Your timezone <span class="req">*</span></label>
+        <input id="f-tz" name="tz" type="text" required placeholder="e.g. UTC+8 Taipei">
+      </div>
+      <div class="field">
+        <label for="f-notes">Notes</label>
+        <textarea id="f-notes" name="notes" placeholder="Capture space, cast size, target engine &mdash; anything that helps us prepare."></textarea>
+      </div>
+      <button class="btn btn-red" type="submit">Send booking request</button>
+      <p class="form-note">Submitting opens your email app &mdash; press send there to complete the booking. Prefer to write directly? Email <a href="mailto:info@zukunftworks.co?subject=Neocore%20demo%20booking">info@zukunftworks.co</a> with your preferred times.</p>
+      <noscript><p class="form-note">This form needs JavaScript to open your email app. Please email <a href="mailto:info@zukunftworks.co?subject=Neocore%20demo%20booking">info@zukunftworks.co</a> directly with your name, company and preferred times.</p></noscript>
+    </form>
+
+    <div class="cta-row">
+      <a class="backlink" href="../">&larr; Back to overview</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot-mini">
+    &copy; 2026 Red Pill Lab &middot; Zukunft Works Ltd. &mdash; <a href="mailto:info@zukunftworks.co">info@zukunftworks.co</a>
+  </div>
+</footer>
+
+<script>
+/* Enhancement only: builds a prefilled mailto from the form. Without JS the page stays readable
+   and the noscript note gives the direct-email path. No network requests, no dependencies. */
+(function () {
+  var form = document.getElementById('booking');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    function v(id) {
+      var el = document.getElementById(id);
+      return el && el.value ? el.value.trim() : '-';
+    }
+    var lines = [
+      'Neocore demo booking request (1 hour)',
+      '',
+      'Name: ' + v('f-name'),
+      'Email: ' + v('f-email'),
+      'Company / channel: ' + v('f-org'),
+      'Interested in: ' + v('f-topic'),
+      'Preferred time #1: ' + v('f-t1'),
+      'Preferred time #2: ' + v('f-t2'),
+      'Timezone: ' + v('f-tz'),
+      'Notes: ' + v('f-notes'),
+      '',
+      'Please confirm the slot by reply.'
+    ];
+    var url = 'mailto:info@zukunftworks.co'
+      + '?subject=' + encodeURIComponent('Neocore demo booking - ' + v('f-name'))
+      + '&body=' + encodeURIComponent(lines.join('\n'));
+    window.__lastBookingMailto = url; /* smoke-test hook */
+    window.location.href = url;
+  });
+})();
+</script>
+
+</body>
+</html>
