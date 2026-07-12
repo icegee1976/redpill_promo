@@ -68,7 +68,10 @@ a{color:inherit}
 .btn-red{background:var(--red);color:#fff}
 .btn-red:hover{box-shadow:0 6px 24px rgba(224,49,43,.3)}
 .hero-art{min-width:0}
-.hero-art svg,.hero-art video{width:100%;height:auto;display:block;border-radius:10px}
+.hero-art svg,.hero-art video,.hero-art img{width:100%;height:auto;display:block;border-radius:10px}
+.page-art{margin-top:40px}
+.page-art img{width:100%;height:auto;display:block;border-radius:12px;border:1px solid var(--dark-line)}
+.std .page-art img{border-color:var(--light-line)}
 
 /* ---------- section basics ---------- */
 section{padding:84px 0}
