@@ -3,12 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex">
 <title>Neocore — 複数人マーカーレス・モーションキャプチャ | Red Pill Lab</title>
-<meta name="description" content="Neocore:VTuber事務所・バーチャルプロダクション・ゲームアニメーションのためのリアルタイム複数人モーションキャプチャ。詳細ページ準備中。">
+<meta name="description" content="Neocore:ウェブカメラ5–6台とRTXワークステーション1台によるリアルタイム複数人モーションキャプチャ。FBX書き出し、LiveLinkでUnreal Engine 5へ、Unity・Warudoプラグイン対応。VTuber事務所・バーチャルプロダクション・ゲームアニメーション向け。">
+<meta property="og:title" content="Neocore — 複数人マーカーレス・モーションキャプチャ">
+<meta property="og:description" content="ウェアラブルなし、マーカーなし。数台のウェブカメラと1台のPCで、キャスト全員を。VTuber事務所・バーチャルプロダクション・ゲームアニメーションのためのリアルタイム複数人モーションキャプチャ。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Neocore — Red Pill Lab">
+<!-- workers.dev deployment; swap the host if a custom domain lands (HANDOFF §8 #4). og:image pending visual asset. -->
+<meta property="og:url" content="https://neocore.agneng.workers.dev/ja/neocore/">
+<link rel="canonical" href="https://neocore.agneng.workers.dev/ja/neocore/">
+<link rel="alternate" hreflang="en" href="https://neocore.agneng.workers.dev/en/neocore/">
+<link rel="alternate" hreflang="zh-Hant" href="https://neocore.agneng.workers.dev/zh/neocore/">
+<link rel="alternate" hreflang="ja" href="https://neocore.agneng.workers.dev/ja/neocore/">
+<link rel="alternate" hreflang="x-default" href="https://neocore.agneng.workers.dev/en/neocore/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../../assets/site.css">
 </head>
-<body class="stub-light">
+<body class="std stub-light">
 
 <header class="topbar">
   <div class="wrap">
@@ -26,25 +37,241 @@
   </div>
 </header>
 
-<main class="stub-main">
+<!-- ================= PAGE HEAD ================= -->
+<section class="std std-page-head" id="top">
   <div class="wrap">
-    <span class="notice">ページ準備中</span>
     <p class="kicker">Neocore &middot; VTuber事務所・バーチャルプロダクション・ゲームアニメーション向け</p>
-    <h2>ウェアラブルなし、マーカーなし。数台のウェブカメラと1台のPCで、キャスト全員を。</h2>
-    <p class="lede">数台のウェブカメラと1台のワークステーションによるリアルタイム複数人モーションキャプチャ——演者は来た服のまま。詳細ページ(仕様・パイプライン・正直な比較)は準備中です。</p>
-    <div class="cta-row">
-      <a class="btn btn-red" href="../demo/">1時間のデモを予約</a>
-      <a class="backlink" href="../">&larr; 概要へ戻る</a>
+    <h1>ウェアラブルなし、マーカーなし。数台のウェブカメラと1台のPCで、キャスト全員を。</h1>
+    <p class="lede">Neocoreは、1つの部屋と5〜6台の1080pウェブカメラ、1台のRTXワークステーションを、複数人対応のモーションキャプチャステージに変えます。演者は<em>来た服のまま</em>。カメラを設置し、ガイド付き校正を実行すれば、テイクの収録を開始できます——カメラを動かさない限り、保存したプロジェクトは再校正なしでそのまま再開できます。</p>
+  </div>
+</section>
+
+<!-- ================= VIDEOS ================= -->
+<section class="std" id="videos">
+  <div class="wrap">
+    <p class="kicker">01 &middot; 実際の映像</p>
+    <h2>Neocoreがキャストをキャプチャする様子を見る。</h2>
+
+    <!-- click-to-play:ページ読み込み時の外部リクエストはゼロ。クリック時のみyoutube-nocookie iframeを注入。JSなしでは通常のリンク -->
+    <div class="videos shorts">
+      <a class="video-slot" data-yt="sBIOTu2mqzE" href="https://youtube.com/shorts/sBIOTu2mqzE" aria-label="NeoCore Promo(YouTube Short)">
+        <span class="play" aria-hidden="true"></span>
+        <span class="vlabel">NeoCore Promo &middot; YouTube Short</span>
+      </a>
+      <a class="video-slot" data-yt="5kNGk1lKg2Q" href="https://youtube.com/shorts/5kNGk1lKg2Q" aria-label="Neocore + CamVerse(YouTube Short)">
+        <span class="play" aria-hidden="true"></span>
+        <span class="vlabel">Neocore + CamVerse &middot; YouTube Short</span>
+      </a>
+      <a class="video-slot" data-yt="bYc2-5gICmw" href="https://youtube.com/shorts/bYc2-5gICmw" aria-label="Neocore in Unreal Engine(YouTube Short)">
+        <span class="play" aria-hidden="true"></span>
+        <span class="vlabel">Neocore in Unreal Engine &middot; YouTube Short</span>
+      </a>
     </div>
   </div>
-</main>
+</section>
 
+<!-- ================= RECIPE + SPECS ================= -->
+<section class="std" id="specs">
+  <div class="wrap">
+    <p class="kicker">02 &middot; レシピ</p>
+    <h2>1つの部屋、1台のワークステーション、キャスト全員。</h2>
+
+    <div class="std-grid">
+      <div>
+        <p class="recipe">ウェブカメラ 5&ndash;6台 <span>+</span> RTXワークステーション 1台 <span>=</span> 3&ndash;4名のリアルタイムモーションキャプチャ</p>
+        <div class="stdspecs">
+          <div class="stdspec"><div class="k">カメラ</div><div class="v"><b>1080p / 60 fpsウェブカメラ 5&ndash;6台</b>(6台推奨)、FOV 90&deg;&ndash;110&deg;、高さ約2mでやや下向きに設置。主要ブランドであれば使用可能。公式推奨モデルはAverMedia PW315。</div></div>
+          <div class="stdspec"><div class="k">スペース</div><div class="v"><b>基準は約5 &times; 5 m</b>、演者3&ndash;4名。公式テスト上限は<b>10 &times; 10 m・演者8名</b>(カメラと計算リソースの追加が必要)。</div></div>
+          <div class="stdspec"><div class="k">ワークステーション</div><div class="v"><b>Intel i7 第13世代以上、NVIDIA RTX 4070以上、32 GB RAM。</b>1台のマシンでシステム全体が動作。</div></div>
+          <div class="stdspec"><div class="k">初回起動</div><div class="v">TensorRTの自動チューニング、5&ndash;10分、初回のみ。以降は起動後すぐ使用可能。</div></div>
+        </div>
+      </div>
+      <div class="std-art" aria-hidden="true">
+        <svg viewBox="0 0 440 420" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#E0312B" opacity=".06">
+            <path d="M78 96 L250 176 L160 262 Z"/>
+            <path d="M362 96 L190 176 L280 262 Z"/>
+            <path d="M78 324 L250 244 L160 158 Z"/>
+            <path d="M362 324 L190 244 L280 158 Z"/>
+            <path d="M220 66 L150 240 L290 240 Z"/>
+            <path d="M220 354 L150 180 L290 180 Z"/>
+          </g>
+          <g stroke="#D8CFC2" stroke-width="1" fill="none">
+            <rect x="90" y="108" width="260" height="204" rx="2"/>
+            <line x1="155" y1="108" x2="155" y2="312"/><line x1="220" y1="108" x2="220" y2="312"/><line x1="285" y1="108" x2="285" y2="312"/>
+            <line x1="90" y1="159" x2="350" y2="159"/><line x1="90" y1="210" x2="350" y2="210"/><line x1="90" y1="261" x2="350" y2="261"/>
+          </g>
+          <g font-family="ui-monospace,Consolas,monospace" font-size="12" fill="#6E6862">
+            <text x="205" y="336">~5 m</text>
+            <text x="358" y="215" transform="rotate(90 358 215)">~5 m</text>
+          </g>
+          <g fill="#FFFFFF" stroke="#E0312B" stroke-width="1.6">
+            <g transform="rotate(45 78 96)"><rect x="63" y="87" width="30" height="18" rx="4"/><circle cx="87" cy="96" r="4"/></g>
+            <g transform="rotate(135 362 96)"><rect x="347" y="87" width="30" height="18" rx="4"/><circle cx="371" cy="96" r="4"/></g>
+            <g transform="rotate(-45 78 324)"><rect x="63" y="315" width="30" height="18" rx="4"/><circle cx="87" cy="324" r="4"/></g>
+            <g transform="rotate(-135 362 324)"><rect x="347" y="315" width="30" height="18" rx="4"/><circle cx="371" cy="324" r="4"/></g>
+            <g transform="rotate(90 220 66)"><rect x="205" y="57" width="30" height="18" rx="4"/><circle cx="229" cy="66" r="4"/></g>
+            <g transform="rotate(-90 220 354)"><rect x="205" y="345" width="30" height="18" rx="4"/><circle cx="229" cy="354" r="4"/></g>
+          </g>
+          <g stroke="#E0312B" stroke-width="1.8" stroke-linecap="round" fill="none">
+            <g transform="translate(165,160)"><circle cx="0" cy="-16" r="6"/><line x1="0" y1="-10" x2="0" y2="10"/><line x1="-9" y1="-4" x2="9" y2="-4"/><line x1="-6" y1="10" x2="-8" y2="24"/><line x1="6" y1="10" x2="8" y2="24"/></g>
+            <g transform="translate(268,196)"><circle cx="0" cy="-16" r="6"/><line x1="0" y1="-10" x2="0" y2="10"/><line x1="-9" y1="-4" x2="9" y2="-4"/><line x1="-6" y1="10" x2="-8" y2="24"/><line x1="6" y1="10" x2="8" y2="24"/></g>
+            <g transform="translate(196,262)"><circle cx="0" cy="-16" r="6"/><line x1="0" y1="-10" x2="0" y2="10"/><line x1="-9" y1="-4" x2="9" y2="-4"/><line x1="-6" y1="10" x2="-8" y2="24"/><line x1="6" y1="10" x2="8" y2="24"/></g>
+          </g>
+          <text x="90" y="392" font-family="ui-monospace,Consolas,monospace" font-size="11.5" fill="#6E6862">推奨6カメラ配置:四隅 + 前 + 後</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PIPELINE ================= -->
+<section class="std" id="pipeline">
+  <div class="wrap">
+    <p class="kicker">03 &middot; パイプライン</p>
+    <h2>テイクからエンジンまで、3つの経路。</h2>
+
+    <div class="pipe">
+      <div class="pipe-card">
+        <h3>収録と書き出し</h3>
+        <p><b>Take Recorder</b>がセッションを収録し、<b>FBX</b>を書き出し——標準的なアニメーション形式で、Unreal Engine、DCCツール、あらゆる制作パイプラインへそのまま持ち込めます。</p>
+      </div>
+      <div class="pipe-card">
+        <h3>ライブストリーミング</h3>
+        <p><b>LiveLink</b>が演者をリアルタイムで<b>Unreal Engine 5</b>へストリーミング。UE5 Mannequinスケルトンで届き、Animation Blueprintですぐ使えます。Zukunft Worksが自社開発したバーチャルプロダクションソフトウェア「CamVerse Studio」にも接続可能。</p>
+      </div>
+      <div class="pipe-card">
+        <h3>エンジンとVTuberアプリ</h3>
+        <p><b>Unityプラグイン</b>(com.redpill.neocore)がUnity内でNeocoreのモーションストリームを読み取り。<b>Warudoプラグイン</b>がVTuberワークフローをカバーします。</p>
+      </div>
+    </div>
+
+    <div class="straight">
+      <p><b>精度について率直に:</b>Neocoreの精度は光学式モーションキャプチャに及びません——その代わり、価格はハイエンド光学システムのおよそ10分の1です。VTuberのライブ配信、バーチャルプロダクション、ゲームアニメーションには、多くの場合これが妥当なトレードオフです。そうでない場合は、下の比較表が教えてくれます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPARISON ================= -->
+<section class="std cmp-light" id="compare">
+  <div class="wrap">
+    <p class="kicker">04 &middot; 正直な比較</p>
+    <h2>Neocoreがすべての行で勝つわけではありません。選定ガイドとしてお読みください。</h2>
+
+    <div class="tblwrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">評価項目</th>
+            <th scope="col">光学式(Vicon / OptiTrack級)</th>
+            <th scope="col">慣性式(Xsens級IMUスーツ)</th>
+            <th class="neo" scope="col">Neocoreファミリー(マーカーレスRGB AI)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="crit" scope="row">絶対精度</th>
+            <td>サブミリ——クラス最高</td>
+            <td>関節角度は優秀;絶対位置はドリフト</td>
+            <td class="neo">センチメートル級——多くのロボット学習タスクに十分</td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">手・指</th>
+            <td>限定的——マーカー密度とオクルージョンの問題</td>
+            <td>グローブの追加が必要</td>
+            <td class="neo"><b>片手27関節、ネイティブ</b>(Neocore RT)</td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">被験者の負担</th>
+            <td>タイトスーツ+マーカー</td>
+            <td>IMUスーツ+ケーブル</td>
+            <td class="neo"><b>普段着;装着物なし</b></td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">環境</th>
+            <td>スタジオ限定</td>
+            <td>屋内 / 屋外 / 工場フロア</td>
+            <td class="neo">屋内;照明とカメラ視線に依存</td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">リアルタイム遅延</th>
+            <td>低(システム依存)</td>
+            <td>約20 ms——クラス最高</td>
+            <td class="neo">&lt;250 ms エンドツーエンド(Neocore RTのテレオペレーション)</td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">初期+運用コスト</th>
+            <td>最高——カメラ、ソフト、部屋の改装</td>
+            <td>中〜中高——スーツ、グローブ、校正</td>
+            <td class="neo"><b>最低</b>——RGBカメラ+ワークステーション+ソフトウェア</td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">最適な用途</th>
+            <td>バイオメカニクス研究;シネマティックVFX</td>
+            <td>非構造化・屋外環境でのテレオペレーション</td>
+            <td class="neo">マルチアクターのPhysical AIデータセット;VTuber配信、バーチャルプロダクション、ゲームアニメーション</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cmp-foot">本比較はNeocore RT Procurement &amp; Integration Brief(2026年6月)の方式別評価を反映しています。Neocore RTと表記された行はRTプラットフォームの説明です。標準のNeocoreシステムは同じマーカーレスRGB技術を採用しています。最適な用途の行にあるVTuber配信・バーチャルプロダクション・ゲームアニメーションは標準Neocoreシステムのポジショニングであり、Brief自体の評価対象はRTプラットフォームです。</p>
+
+    <div class="cta-row">
+      <a class="btn btn-red" href="../demo/">1時間のデモを予約<small>ご希望の時間を選択——返信で確定します</small></a>
+      <p class="cta-note">スペース、キャストの人数、対象エンジンをお知らせください——カメラ配置案とお見積もりをご返信します。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
 <footer>
-  <div class="wrap foot-mini">
-    &copy; 2026 Red Pill Lab &middot; Zukunft Works Ltd. &mdash; <a href="mailto:info@zukunftworks.co">info@zukunftworks.co</a><br>
-    本日本語版は英語版からの翻訳ドラフトであり、ネイティブスピーカーによる校閲を予定しています。
+  <div class="wrap">
+    <div class="foot-cta">
+      <div>
+        <h2>Neocoreを実際に見る。</h2>
+        <p>台北のZukunft Works Ltd.を通じて1時間のNeocoreデモを予約——ご希望の時間を選べば、返信で確定します。または、スペース・キャストの人数・対象エンジンを添えてご連絡いただければ、カメラ配置案とお見積もりをご返信します。価格は見積もり制です。</p>
+      </div>
+      <div class="btns">
+        <a class="btn btn-red" href="../demo/">1時間のNeocoreデモを予約</a>
+        <a class="mail" href="mailto:info@zukunftworks.co?subject=Neocore%20quote%20request">お見積もり &mdash; info@zukunftworks.co</a>
+      </div>
+    </div>
+    <div class="foot-meta">
+      <div class="brands">
+        <b>Red Pill Lab</b> &mdash; 開発元(台湾)<br>
+        <b>Zukunft Works Ltd.</b> &mdash; 販売代理店(台北)<br>
+        &copy; 2026 Red Pill Lab &middot; Zukunft Works Ltd.
+      </div>
+      <div class="legal">
+        NVIDIA、Intel、AverMedia、Unreal Engine、Unity、Warudo、Vicon、OptiTrack、Xsensおよびその他すべての第三者名称は各所有者の財産であり、本文中の言及は公開記録のあるインテグレーションおよび方式レベルの比較の説明のみを目的とし、いかなる推奨も意味しません。仕様はNeocore導入ガイドおよびNeocore RT Procurement &amp; Integration Brief(2026年6月)に基づきます。<br>
+        本日本語版は英語版からの翻訳ドラフトであり、ネイティブスピーカーによる校閲を予定しています。
+      </div>
+    </div>
   </div>
 </footer>
+
+<script>
+/* Enhancement only: click-to-play YouTube embeds. Page load makes zero external requests;
+   a youtube-nocookie.com iframe is injected only when the visitor clicks an activated slot. */
+(function () {
+  var slots = document.querySelectorAll('.video-slot[data-yt]');
+  for (var i = 0; i < slots.length; i++) {
+    slots[i].addEventListener('click', function (e) {
+      var id = this.getAttribute('data-yt');
+      if (!id) { e.preventDefault(); return; }
+      e.preventDefault();
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture';
+      f.allowFullscreen = true;
+      f.title = this.getAttribute('aria-label') || 'Video';
+      this.innerHTML = '';
+      this.appendChild(f);
+      this.classList.add('playing');
+    });
+  }
+})();
+</script>
 
 </body>
 </html>

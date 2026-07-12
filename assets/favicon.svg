@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Red Pill Lab mark: a red pill on the Lab Precision dark ground -->
+  <rect width="64" height="64" rx="14" fill="#0A0E12"/>
+  <g transform="rotate(-45 32 32)">
+    <rect x="14" y="23" width="36" height="18" rx="9" fill="#E0312B"/>
+    <path d="M23 23 h9 v18 h-9 a9 9 0 0 1 0-18 z" fill="#F2F5F6"/>
+  </g>
+</svg>
