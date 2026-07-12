@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neocore RT — Physical AIのためのモーションデータ | Red Pill Lab</title>
+<meta name="description" content="Neocore RT:ヒューマノイドロボットの訓練とテレオペレーションのためのマーカーレスRGBモーションキャプチャ。片手27関節、&lt;250 msエンドツーエンド遅延、普段着のまま、skeleton-onlyプライバシーモード。販売代理店:Zukunft Works Ltd.">
+<meta property="og:title" content="Neocore RT — Physical AIのためのモーションデータ">
+<meta property="og:description" content="ヒューマノイドロボットの訓練とテレオペレーションのためのマーカーレスRGBモーションキャプチャ。片手27関節、&lt;250 msエンドツーエンド遅延、オペレーターは普段着のまま。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Neocore — Red Pill Lab">
+<!-- workers.dev deployment; swap the host if a custom domain lands (HANDOFF §8 #4). og:image pending visual asset. -->
+<meta property="og:url" content="https://neocore.agneng.workers.dev/ja/neocore-rt/">
+<link rel="canonical" href="https://neocore.agneng.workers.dev/ja/neocore-rt/">
+<link rel="alternate" hreflang="en" href="https://neocore.agneng.workers.dev/en/neocore-rt/">
+<link rel="alternate" hreflang="zh-Hant" href="https://neocore.agneng.workers.dev/zh/neocore-rt/">
+<link rel="alternate" hreflang="ja" href="https://neocore.agneng.workers.dev/ja/neocore-rt/">
+<link rel="alternate" hreflang="x-default" href="https://neocore.agneng.workers.dev/en/neocore-rt/">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="wordmark" href="../">NEO<span>CORE</span></a>
+    <nav class="topnav">
+      <a href="./" aria-current="page">Neocore RT</a>
+      <a href="../neocore/">Neocore</a>
+      <a class="contact" href="mailto:info@zukunftworks.co">info@zukunftworks.co</a>
+    </nav>
+    <nav class="lang-switch" aria-label="言語">
+      <a href="../../en/neocore-rt/" lang="en">EN</a>
+      <a href="../../zh/neocore-rt/" lang="zh-Hant">繁中</a>
+      <b>日本語</b>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= PAGE HEAD ================= -->
+<section class="rt rt-page-head" id="top">
+  <div class="wrap">
+    <p class="kicker">Neocore RT &middot; Physical AI &amp; ロボティクスチーム向け</p>
+    <h1>Physical AIのボトルネックはモーションデータ。スーツなしで収集する。</h1>
+    <p class="lede">Omdiaの統計では、2025年のヒューマノイドロボット世界出荷台数は約13,000台。2035年には年間260万台に達すると予測されています。この曲線を今制約しているのは計算能力よりも、実世界の動きを模倣学習とテレオペレーションのパイプラインへ送り込む速度です。Neocore RTはその動きを標準的なRGBカメラでキャプチャします。オペレーターは<em>普段着のまま、実際の作業者として振る舞います</em>——タイトスーツを着たリハーサル要員ではなく。</p>
+
+    <div class="audience">
+      <div class="aud-card">
+        <h3>ロボット訓練データセット</h3>
+        <p>実際の組立セルでのマルチカメラ・マルチアクターキャプチャ。同じ動作を、数十人のオペレーターとセッションにわたって、被験者負担ほぼゼロで収集——模倣学習が最も渇望するスループットです。</p>
+      </div>
+      <div class="aud-card">
+        <h3>ヒューマノイドのテレオペレーション</h3>
+        <p>普段着のオペレーターがヒューマノイドをリアルタイムで操作——NVIDIA GTC Taipei 2026で実演されたとおり。骨格ストリームは貴社ロボットの運動学モデルへリターゲットされます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SPECIFICATIONS ================= -->
+<section class="rt" id="specs">
+  <div class="wrap">
+    <p class="kicker">01 &middot; 仕様</p>
+    <h2>ロボティクスの現場で本当に重要な6つの数字。</h2>
+
+    <div class="specgrid six">
+      <div class="spec">
+        <div class="num">27<span> 関節</span></div>
+        <div class="lbl"><b>片手あたりのネイティブ指トラッキング</b>——手のディテールはシステム中核に組み込み。グローブの後付けは不要。器用さ学習のための指レベルのデモンストレーションデータ。</div>
+      </div>
+      <div class="spec">
+        <div class="num">&lt;250<span> ms</span></div>
+        <div class="lbl"><b>エンドツーエンドのテレオペレーション遅延</b>——カメラからロボット制御ループまで、オペレーターの装着物ゼロ。</div>
+      </div>
+      <div class="spec">
+        <div class="num">cm<span> 級</span></div>
+        <div class="lbl"><b>絶対位置精度</b>——多くのロボット学習タスクに十分。サブミリが必要なら光学式が依然として最適。下の比較表をご覧ください。</div>
+      </div>
+      <div class="spec">
+        <div class="num">multi<span> cam &times; actor</span></div>
+        <div class="lbl"><b>マルチカメラ・マルチアクターキャプチャ</b>——AAEON Computex 2026リファレンスデザインで検証済み。</div>
+      </div>
+      <div class="spec">
+        <div class="num">0<span> 装着物</span></div>
+        <div class="lbl"><b>普段着のみ</b>——標準的なRGBカメラ、数分で部屋の校正が完了。</div>
+      </div>
+      <div class="spec">
+        <div class="num">Skeleton<span>-only 出力</span></div>
+        <div class="lbl"><b>プライバシーモード</b>——生映像はエッジで破棄可能。残るのは匿名化された骨格ストリームのみ。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VALIDATION ================= -->
+<section class="rt" id="validation">
+  <div class="wrap">
+    <p class="kicker">02 &middot; 実績</p>
+    <h2>公開記録あり、2026年6月時点。</h2>
+
+    <div class="claim">
+      <p>NVIDIA keynoteに2年連続で登場した、現時点で唯一のマーカーレス・モーションキャプチャブランド——Computex 2025での発表とGTC Taipei 2026のオープニング。</p>
+      <p class="src">NVIDIA Computex 2025 keynoteおよびNVIDIA GTC Taipei 2026オープニングkeynote(2026年6月)にて——いずれも公開記録あり。</p>
+    </div>
+
+    <div class="proof">
+      <h3>実績と検証済みインテグレーション</h3>
+      <ul>
+        <li><b>NVIDIA Computex 2025</b>——keynoteオープニングでNeocore RTを発表。</li>
+        <li><b>NVIDIA GTC Taipei 2026</b>——オープニングkeynote映像に登場(2026年6月)。</li>
+        <li><b>AAEONリファレンスデザイン</b>——MAXER-5100推論サーバー(NVIDIA RTX PRO 4000 Blackwell SFF GPU×2)で検証、NVIDIA Isaac Simリファレンスフレームワークを採用(Computex 2026)。公開記録があり再現可能。</li>
+        <li><b>NVIDIA Inceptionメンバー</b>——技術と市場展開の継続的サポート。</li>
+        <li><b>エッジ展開</b>——軽量なVideoPoseバリアントがMemryX MX3エッジアクセラレーター上で60 fps動作。</li>
+        <li><b>公開特許</b>——2段階ニューラルネットワークとCeres Solver数値最適化:1枚の2D画像から3Dグローバル姿勢を推定。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPARISON ================= -->
+<section class="rt cmp-dark" id="compare">
+  <div class="wrap">
+    <p class="kicker">03 &middot; キャプチャ方式の選び方</p>
+    <h2>2026年時点の導入方式を正直に比較。</h2>
+
+    <div class="tblwrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">評価項目</th>
+            <th scope="col">光学式(マーカー)</th>
+            <th scope="col">慣性式(IMUスーツ)</th>
+            <th class="neo" scope="col">Neocore RT(マーカーレスAI)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="crit" scope="row">絶対精度</th>
+            <td>サブミリ——クラス最高</td>
+            <td>関節角度は優秀;絶対位置はドリフト</td>
+            <td class="neo">センチメートル級——多くのロボット学習タスクに十分</td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">手・指のディテール</th>
+            <td>限定的——オクルージョンとマーカー密度</td>
+            <td>グローブの追加が必要</td>
+            <td class="neo"><b>片手27関節、ネイティブ</b></td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">セットアップと校正</th>
+            <td>専用キャプチャ空間;マーカー+セッション毎の校正</td>
+            <td>スーツ着脱、IMU校正、毎回の磁気チェック</td>
+            <td class="neo">標準RGBカメラ;数分で部屋の校正完了</td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">被験者の負担</th>
+            <td>タイトスーツ+マーカー</td>
+            <td>IMUスーツ+ケーブル</td>
+            <td class="neo"><b>普段着;装着物なし</b></td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">環境の柔軟性</th>
+            <td>スタジオ限定</td>
+            <td>屋内 / 屋外 / 工場フロア</td>
+            <td class="neo">屋内;照明とカメラ視線に依存</td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">リアルタイム遅延</th>
+            <td>低(システム依存)</td>
+            <td>約20 ms——クラス最高</td>
+            <td class="neo">&lt;250 ms エンドツーエンド</td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">初期+運用コスト</th>
+            <td>最高——カメラ、ソフト、部屋の改装</td>
+            <td>中〜中高——スーツ、グローブ、校正</td>
+            <td class="neo"><b>最低</b>——RGBカメラ+エッジボックス+ソフトウェア</td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">最適な用途</th>
+            <td>バイオメカニクス研究;シネマティックVFX</td>
+            <td>非構造化環境でのテレオペレーション</td>
+            <td class="neo">スケーラブルなPhysical AIデータセット;マルチアクターの産業キャプチャ</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cmp-foot">この表はランキングではなく、選定ガイドとしてお読みください。歩行病理の研究には今も光学式が、災害現場の四足ロボットにはIMUが適しています。Neocore RTは、組立セル・マイクロファクトリー・管理された産業環境におけるPhysical AI訓練データのために設計されています。</p>
+  </div>
+</section>
+
+<!-- ================= EVALUATION PATH ================= -->
+<section class="rt" id="evaluate">
+  <div class="wrap">
+    <p class="kicker">04 &middot; 評価パス</p>
+    <h2>検討から導入まで、5つのステップ。</h2>
+
+    <ol class="eval">
+      <li><div><b>データ要件の定義</b><p>模倣学習、テレオペレーション、安全検証——精度と遅延の要件はそれぞれ異なります。</p></div></li>
+      <li><div><b>現地調査</b><p>キャプチャ空間、照明の一貫性、カメラ配置。照明は依然として重要です。</p></div></li>
+      <li><div><b>1日パイロット</b><p>貴社のオペレーターと貴社のタスクで。成果物:貴社環境からの実スケルトンデータ。</p></div></li>
+      <li><div><b>フォーマット検証</b><p>ストリームはIsaac Sim、ROS、MuJoCo、自社パイプラインへ。ロボットの運動学へリターゲット。</p></div></li>
+      <li><div><b>調達と展開</b><p>ハードウェアリファレンス(AAEONまたは同等)、ソフトウェアライセンス、校正サポート、キャプチャ運用。</p></div></li>
+    </ol>
+
+    <div class="cta-row">
+      <a class="btn btn-rt" href="mailto:info@zukunftworks.co?subject=Neocore%20RT%20evaluation">評価を申し込む<small>貴社のオペレーター・タスクでのパイロットキャプチャ</small></a>
+      <p class="cta-note">価格はZukunft Works Ltd.による見積もり制です。評価は通常、1日のパイロットから始まります:貴社の環境・タスク・オペレーターで、実スケルトンデータを取得。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-cta">
+      <div>
+        <h2>1日パイロットから始める。</h2>
+        <p>評価・パイロット・調達——大中華圏および東南アジア。ユースケース(キャプチャ空間・オペレーター数・対象パイプライン)を添えてご連絡ください。具体的な評価パスをご返信します。</p>
+      </div>
+      <div class="btns">
+        <a class="btn btn-rt" href="mailto:info@zukunftworks.co?subject=Neocore%20RT%20evaluation">info@zukunftworks.co へ連絡</a>
+        <a class="mail" href="mailto:info@zukunftworks.co?subject=Neocore%20RT%20evaluation">info@zukunftworks.co</a>
+      </div>
+    </div>
+    <div class="foot-meta">
+      <div class="brands">
+        <b>Red Pill Lab</b> &mdash; 開発元(台湾)<br>
+        <b>Zukunft Works Ltd.</b> &mdash; 販売代理店(台北)<br>
+        &copy; 2026 Red Pill Lab &middot; Zukunft Works Ltd.
+      </div>
+      <div class="legal">
+        NVIDIA、Isaac Sim、Computex、GTC、AAEON、MemryXおよびその他すべての第三者名称は各所有者の財産であり、本文中の言及は公開記録のあるデモンストレーションおよびインテグレーションの説明のみを目的としています。市場数値の出典はOmdiaです。仕様はNeocore RT Procurement &amp; Integration Brief(2026年6月)に基づきます。<br>
+        本日本語版は英語版からの翻訳ドラフトであり、ネイティブスピーカーによる校閲を予定しています。
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -33,6 +33,10 @@ a{color:inherit}
 .topnav a:hover{color:var(--white)}
 .topnav a.contact{color:var(--green)}
 .lang{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--dark-muted);border:1px solid var(--dark-line);border-radius:6px;padding:4px 9px;cursor:default}
+.lang-switch{display:flex;gap:2px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;border:1px solid var(--dark-line);border-radius:6px;padding:2px;white-space:nowrap}
+.lang-switch a{text-decoration:none;color:var(--dark-muted);padding:3px 8px;border-radius:4px;transition:color .15s}
+.lang-switch a:hover{color:var(--white)}
+.lang-switch b{font-weight:600;color:var(--white);background:var(--dark-line);padding:3px 8px;border-radius:4px}
 
 /* ---------- hero ---------- */
 .hero{padding:84px 0 60px;position:relative;overflow:hidden}
@@ -135,6 +139,51 @@ h2{font-size:32px;line-height:1.2;font-weight:800;letter-spacing:-.01em;max-widt
 .pipe-line b{color:var(--charcoal);font-weight:650}
 .std .cta-note{color:var(--light-muted)}
 
+/* ---------- Neocore product page (light) ---------- */
+.std-page-head{padding:72px 0 8px}
+.std-page-head h1{font-size:40px;line-height:1.16;font-weight:800;letter-spacing:-.01em;max-width:22em}
+.std-grid{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.std-art svg{width:100%;height:auto;display:block}
+.stdspecs{margin-top:26px;display:grid;gap:0;border-top:1px solid var(--light-line)}
+.stdspec{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--light-line);font-size:14px}
+.stdspec .k{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--light-muted);padding-top:2px}
+.stdspec .v b{font-weight:650}
+.pipe{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pipe-card{background:var(--light-panel);border:1px solid var(--light-line);border-radius:10px;padding:24px}
+.pipe-card h3{font-size:15px;font-weight:700;margin-bottom:10px}
+.pipe-card h3::before{content:"";display:inline-block;width:10px;height:10px;background:var(--red);border-radius:2px;margin-right:9px}
+.pipe-card p{font-size:14px;color:var(--light-muted)}
+.pipe-card p b{color:var(--charcoal);font-weight:600}
+.straight{margin-top:44px;background:var(--red-dim);border-left:3px solid var(--red);border-radius:0 10px 10px 0;padding:22px 26px;max-width:52em}
+.straight p{font-size:16.5px;line-height:1.6}
+.straight p b{font-weight:700}
+/* light comparison table */
+.cmp-light .tblwrap{margin-top:36px;overflow-x:auto;background:var(--light-panel);border:1px solid var(--light-line);border-radius:12px}
+.cmp-light table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:720px}
+.cmp-light th,.cmp-light td{padding:14px 18px;text-align:left;vertical-align:top;border-bottom:1px solid var(--light-line)}
+.cmp-light tr:last-child td{border-bottom:none}
+.cmp-light thead th{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--light-muted);background:#F5EFE7;font-weight:600}
+.cmp-light thead th.neo{color:var(--red)}
+.cmp-light th.crit{font-family:var(--sans);font-size:13.5px;letter-spacing:0;text-transform:none;background:transparent;font-weight:650;white-space:nowrap;color:var(--charcoal)}
+.cmp-light td{color:var(--light-muted)}
+.cmp-light td.neo{color:var(--charcoal);background:var(--red-dim)}
+.cmp-light td.neo b{color:var(--red)}
+.cmp-light .cmp-foot{margin-top:16px;font-size:13px;color:var(--light-muted);max-width:52em}
+/* click-to-play video slots (thumbnails local; YouTube iframe only after click) */
+.videos{margin-top:36px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.videos.shorts{grid-template-columns:repeat(3,minmax(0,240px));justify-content:start}
+.videos.shorts .video-slot{aspect-ratio:9/16}
+.video-slot{position:relative;display:block;aspect-ratio:16/9;background:#14181B;border:1px solid var(--light-line);border-radius:10px;overflow:hidden;text-decoration:none}
+.video-slot iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-slot .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.video-slot .play::before{content:"";width:64px;height:64px;border-radius:50%;background:rgba(224,49,43,.92);transition:transform .12s}
+.video-slot .play::after{content:"";position:absolute;width:0;height:0;border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+.video-slot:hover .play::before{transform:scale(1.08)}
+.video-slot .vlabel{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 10px;font-size:12.5px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.6))}
+.video-slot.empty{cursor:default}
+.video-slot.empty .play::before{background:rgba(110,104,98,.5)}
+.video-slot.empty:hover .play::before{transform:none}
+
 /* ---------- footer ---------- */
 footer{background:var(--dark-bg);color:var(--dark-muted);padding:72px 0 48px;border-top:1px solid var(--dark-line)}
 .foot-cta{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;padding-bottom:48px;border-bottom:1px solid var(--dark-line)}
@@ -182,6 +231,14 @@ footer{background:var(--dark-bg);color:var(--dark-muted);padding:72px 0 48px;bor
   .audience{grid-template-columns:1fr}
   .proof ul{grid-template-columns:1fr}
   .rt-page-head h1{font-size:33px}
+  .std-page-head h1{font-size:33px}
+  .std-grid{grid-template-columns:1fr}
+  .pipe{grid-template-columns:1fr}
+  .videos{grid-template-columns:1fr}
+  .videos.shorts{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+  .videos.shorts .play::before{width:40px;height:40px}
+  .videos.shorts .play::after{border-width:7px 0 7px 12px;margin-left:3px}
+  .videos.shorts .vlabel{font-size:10.5px;padding:18px 8px 7px}
   .foot-cta{grid-template-columns:1fr}
 }
 @media(max-width:600px){
@@ -197,5 +254,7 @@ footer{background:var(--dark-bg);color:var(--dark-muted);padding:72px 0 48px;bor
   .grid2{grid-template-columns:1fr}
   .fork{grid-template-columns:1fr}
   .rt-page-head h1{font-size:28px}
+  .std-page-head h1{font-size:28px}
+  .stdspec{grid-template-columns:1fr;gap:2px}
   .eval li{grid-template-columns:36px 1fr;gap:12px}
 }

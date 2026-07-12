@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neocoreデモを予約 — Red Pill Lab</title>
+<meta name="description" content="Zukunft Works Ltd.を通じて1時間のNeocoreデモを予約。お名前とご希望の時間をお知らせください。返信で時間を確定します。">
+<!-- workers.dev deployment; swap the host if a custom domain lands (HANDOFF §8 #4) -->
+<link rel="canonical" href="https://neocore.agneng.workers.dev/ja/demo/">
+<link rel="alternate" hreflang="en" href="https://neocore.agneng.workers.dev/en/demo/">
+<link rel="alternate" hreflang="zh-Hant" href="https://neocore.agneng.workers.dev/zh/demo/">
+<link rel="alternate" hreflang="ja" href="https://neocore.agneng.workers.dev/ja/demo/">
+<link rel="alternate" hreflang="x-default" href="https://neocore.agneng.workers.dev/en/demo/">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body class="stub-light">
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="wordmark" href="../">NEO<span>CORE</span></a>
+    <nav class="topnav">
+      <a href="../neocore-rt/">Neocore RT</a>
+      <a href="../neocore/">Neocore</a>
+      <a class="contact" href="mailto:info@zukunftworks.co">info@zukunftworks.co</a>
+    </nav>
+    <nav class="lang-switch" aria-label="言語">
+      <a href="../../en/demo/" lang="en">EN</a>
+      <a href="../../zh/demo/" lang="zh-Hant">繁中</a>
+      <b>日本語</b>
+    </nav>
+  </div>
+</header>
+
+<main class="stub-main">
+  <div class="wrap">
+    <p class="kicker">Neocore &middot; オンラインデモ</p>
+    <h2>1時間のNeocoreデモを予約する。</h2>
+    <p class="lede">お名前とご希望の時間をお知らせください。送信するとメールアプリが開き、予約内容がZukunft Works Ltd.宛てに入力済みの状態になります——そのまま送信してください。返信で時間を確定します。</p>
+
+    <form class="form" id="booking">
+      <div class="grid2">
+        <div class="field">
+          <label for="f-name">お名前 <span class="req">*</span></label>
+          <input id="f-name" name="name" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="f-email">メールアドレス <span class="req">*</span></label>
+          <input id="f-email" name="email" type="email" required autocomplete="email">
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-org">会社 / チャンネル</label>
+        <input id="f-org" name="org" type="text" autocomplete="organization">
+      </div>
+      <div class="field">
+        <label for="f-topic">ご覧になりたい内容</label>
+        <select id="f-topic" name="topic">
+          <option value="VTuber / agency 3D live">VTuber / 事務所の3Dライブ</option>
+          <option value="Virtual production">バーチャルプロダクション</option>
+          <option value="Game animation">ゲームアニメーション</option>
+          <option value="Other">その他</option>
+        </select>
+      </div>
+      <div class="grid2">
+        <div class="field">
+          <label for="f-t1">第一希望日時 <span class="req">*</span></label>
+          <input id="f-t1" name="time1" type="datetime-local" required>
+        </div>
+        <div class="field">
+          <label for="f-t2">第二希望日時</label>
+          <input id="f-t2" name="time2" type="datetime-local">
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-tz">タイムゾーン <span class="req">*</span></label>
+        <select id="f-tz" name="tz" required>
+          <option value="" disabled selected>タイムゾーンを選択&hellip;</option>
+          <option value="UTC-12">UTC&minus;12 — ベーカー島</option>
+          <option value="UTC-11">UTC&minus;11 — パゴパゴ</option>
+          <option value="UTC-10">UTC&minus;10 — ホノルル</option>
+          <option value="UTC-09">UTC&minus;9 — アンカレッジ</option>
+          <option value="UTC-08">UTC&minus;8 — ロサンゼルス、バンクーバー</option>
+          <option value="UTC-07">UTC&minus;7 — デンバー、フェニックス</option>
+          <option value="UTC-06">UTC&minus;6 — シカゴ、メキシコシティ</option>
+          <option value="UTC-05">UTC&minus;5 — ニューヨーク、トロント</option>
+          <option value="UTC-04">UTC&minus;4 — サンティアゴ、ハリファックス</option>
+          <option value="UTC-03">UTC&minus;3 — サンパウロ、ブエノスアイレス</option>
+          <option value="UTC-02">UTC&minus;2 — フェルナンド・デ・ノローニャ</option>
+          <option value="UTC-01">UTC&minus;1 — アゾレス諸島</option>
+          <option value="UTC+00">UTC&plusmn;0 — ロンドン、リスボン</option>
+          <option value="UTC+01">UTC+1 — パリ、ベルリン、ラゴス</option>
+          <option value="UTC+02">UTC+2 — カイロ、ヨハネスブルグ、アテネ</option>
+          <option value="UTC+03">UTC+3 — モスクワ、イスタンブール、ナイロビ</option>
+          <option value="UTC+04">UTC+4 — ドバイ</option>
+          <option value="UTC+05">UTC+5 — カラチ</option>
+          <option value="UTC+05:30">UTC+5:30 — インド(デリー、ムンバイ)</option>
+          <option value="UTC+06">UTC+6 — ダッカ、アルマトイ</option>
+          <option value="UTC+07">UTC+7 — バンコク、ジャカルタ、ハノイ</option>
+          <option value="UTC+08">UTC+8 — 台北、香港、シンガポール、北京</option>
+          <option value="UTC+09">UTC+9 — 東京、ソウル</option>
+          <option value="UTC+09:30">UTC+9:30 — アデレード</option>
+          <option value="UTC+10">UTC+10 — シドニー、ブリスベン</option>
+          <option value="UTC+11">UTC+11 — ヌメア</option>
+          <option value="UTC+12">UTC+12 — オークランド</option>
+          <option value="UTC+13">UTC+13 — アピア、ヌクアロファ</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-notes">備考</label>
+        <textarea id="f-notes" name="notes" placeholder="キャプチャ空間、キャストの人数、対象エンジンなど——準備に役立つ情報をお知らせください。"></textarea>
+      </div>
+      <button class="btn btn-red" type="submit">予約リクエストを送信</button>
+      <p class="form-note">送信するとメールアプリが開きます——そこで「送信」を押すと予約が完了します。直接メールをご希望の場合は <a href="mailto:info@zukunftworks.co?subject=Neocore%20demo%20booking">info@zukunftworks.co</a> へご希望の時間を添えてご連絡ください。</p>
+      <noscript><p class="form-note">このフォームはメールアプリを開くためにJavaScriptが必要です。<a href="mailto:info@zukunftworks.co?subject=Neocore%20demo%20booking">info@zukunftworks.co</a> へお名前・会社名・ご希望の時間を直接お送りください。</p></noscript>
+    </form>
+
+    <div class="cta-row">
+      <a class="backlink" href="../">&larr; 概要へ戻る</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot-mini">
+    &copy; 2026 Red Pill Lab &middot; Zukunft Works Ltd. &mdash; <a href="mailto:info@zukunftworks.co">info@zukunftworks.co</a><br>
+    本日本語版は英語版からの翻訳ドラフトであり、ネイティブスピーカーによる校閲を予定しています。
+  </div>
+</footer>
+
+<script>
+/* Enhancement only: builds a prefilled mailto from the form (booking email body stays in
+   English so the distributor processes one format). No network requests, no dependencies. */
+(function () {
+  var form = document.getElementById('booking');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    function v(id) {
+      var el = document.getElementById(id);
+      return el && el.value ? el.value.trim() : '-';
+    }
+    var lines = [
+      'Neocore demo booking request (1 hour)',
+      '',
+      'Name: ' + v('f-name'),
+      'Email: ' + v('f-email'),
+      'Company / channel: ' + v('f-org'),
+      'Interested in: ' + v('f-topic'),
+      'Preferred time #1: ' + v('f-t1'),
+      'Preferred time #2: ' + v('f-t2'),
+      'Timezone: ' + v('f-tz'),
+      'Notes: ' + v('f-notes'),
+      '',
+      'Please confirm the slot by reply. (Submitted from the ja page)'
+    ];
+    var url = 'mailto:info@zukunftworks.co'
+      + '?subject=' + encodeURIComponent('Neocore demo booking - ' + v('f-name'))
+      + '&body=' + encodeURIComponent(lines.join('\n'));
+    window.__lastBookingMailto = url; /* smoke-test hook */
+    window.location.href = url;
+  });
+})();
+</script>
+
+</body>
+</html>

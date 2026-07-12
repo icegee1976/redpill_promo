@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neocore RT — Physical AI 的動作資料 | Red Pill Lab</title>
+<meta name="description" content="Neocore RT:為人形機器人訓練與遙操作而生的無標記 RGB 動作捕捉。單手 27 關節、&lt;250 ms 端到端延遲、便服上陣、skeleton-only 隱私模式。由 Zukunft Works Ltd. 經銷。">
+<meta property="og:title" content="Neocore RT — Physical AI 的動作資料">
+<meta property="og:description" content="為人形機器人訓練與遙操作而生的無標記 RGB 動作捕捉。單手 27 關節、&lt;250 ms 端到端延遲、操作員穿便服上陣。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Neocore — Red Pill Lab">
+<!-- workers.dev deployment; swap the host if a custom domain lands (HANDOFF §8 #4). og:image pending visual asset. -->
+<meta property="og:url" content="https://neocore.agneng.workers.dev/zh/neocore-rt/">
+<link rel="canonical" href="https://neocore.agneng.workers.dev/zh/neocore-rt/">
+<link rel="alternate" hreflang="en" href="https://neocore.agneng.workers.dev/en/neocore-rt/">
+<link rel="alternate" hreflang="zh-Hant" href="https://neocore.agneng.workers.dev/zh/neocore-rt/">
+<link rel="alternate" hreflang="ja" href="https://neocore.agneng.workers.dev/ja/neocore-rt/">
+<link rel="alternate" hreflang="x-default" href="https://neocore.agneng.workers.dev/en/neocore-rt/">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="wordmark" href="../">NEO<span>CORE</span></a>
+    <nav class="topnav">
+      <a href="./" aria-current="page">Neocore RT</a>
+      <a href="../neocore/">Neocore</a>
+      <a class="contact" href="mailto:info@zukunftworks.co">info@zukunftworks.co</a>
+    </nav>
+    <nav class="lang-switch" aria-label="語言">
+      <a href="../../en/neocore-rt/" lang="en">EN</a>
+      <b>繁中</b>
+      <a href="../../ja/neocore-rt/" lang="ja">日本語</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= PAGE HEAD ================= -->
+<section class="rt rt-page-head" id="top">
+  <div class="wrap">
+    <p class="kicker">Neocore RT &middot; 為 Physical AI 與機器人團隊</p>
+    <h1>Physical AI 的瓶頸是動作資料。不穿動捕衣,照樣收集。</h1>
+    <p class="lede">Omdia 統計 2025 年全球人形機器人出貨約 13,000 台,並預估 2035 年達每年 260 萬台。限制這條曲線的已經不是算力——而是團隊把真實世界動作餵進模仿學習與遙操作管線的速度。Neocore RT 用標準 RGB 攝影機捕捉這些動作:操作員<em>穿著便服、像真正的作業員一樣工作</em>,而不是套著緊身衣的排練者。</p>
+
+    <div class="audience">
+      <div class="aud-card">
+        <h3>機器人訓練資料集</h3>
+        <p>在真實組裝工作站做多攝影機、多人捕捉。同一個動作,跨數十位操作員與場次收集,受試者負擔趨近於零——正是模仿學習最缺的資料通量。</p>
+      </div>
+      <div class="aud-card">
+        <h3>人形機器人遙操作</h3>
+        <p>操作員穿著便服即時驅動人形機器人,如 NVIDIA GTC Taipei 2026 現場所示。骨架串流可重定向到你的機器人運動學模型。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SPECIFICATIONS ================= -->
+<section class="rt" id="specs">
+  <div class="wrap">
+    <p class="kicker">01 &middot; 規格</p>
+    <h2>機器人現場真正要緊的六個數字。</h2>
+
+    <div class="specgrid six">
+      <div class="spec">
+        <div class="num">27<span> 關節</span></div>
+        <div class="lbl"><b>單手原生手指追蹤</b>——手部細節內建於系統核心,無需外掛手套。為靈巧度學習提供手指級示範資料。</div>
+      </div>
+      <div class="spec">
+        <div class="num">&lt;250<span> ms</span></div>
+        <div class="lbl"><b>端到端遙操作延遲</b>——從攝影機到機器人控制迴路,操作員零穿戴。</div>
+      </div>
+      <div class="spec">
+        <div class="num">cm<span> 級</span></div>
+        <div class="lbl"><b>絕對位置精度</b>——足以應付多數機器人學習任務;若需要次毫米,光學動捕仍是首選,見下方比較表。</div>
+      </div>
+      <div class="spec">
+        <div class="num">multi<span> cam &times; actor</span></div>
+        <div class="lbl"><b>多攝影機、多演員捕捉</b>——已在 AAEON Computex 2026 參考架構中驗證。</div>
+      </div>
+      <div class="spec">
+        <div class="num">0<span> 穿戴</span></div>
+        <div class="lbl"><b>便服即可</b>——標準 RGB 攝影機,數分鐘完成場地校正。</div>
+      </div>
+      <div class="spec">
+        <div class="num">Skeleton<span>-only 輸出</span></div>
+        <div class="lbl"><b>隱私模式</b>——原始影像可在邊緣端直接捨棄;保留的是匿名骨架流。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VALIDATION ================= -->
+<section class="rt" id="validation">
+  <div class="wrap">
+    <p class="kicker">02 &middot; 驗證與背書</p>
+    <h2>公開可查,截至 2026 年 6 月。</h2>
+
+    <div class="claim">
+      <p>至今唯一連續兩年登上 NVIDIA keynote 的無標記動捕品牌——Computex 2025 發表與 GTC Taipei 2026 開場。</p>
+      <p class="src">見 NVIDIA Computex 2025 keynote 與 NVIDIA GTC Taipei 2026 開場 keynote(2026 年 6 月)——均有公開紀錄。</p>
+    </div>
+
+    <div class="proof">
+      <h3>公開紀錄與已驗證整合</h3>
+      <ul>
+        <li><b>NVIDIA Computex 2025</b>——Neocore RT 於 keynote 開場發表。</li>
+        <li><b>NVIDIA GTC Taipei 2026</b>——登上開場 keynote 影片(2026 年 6 月)。</li>
+        <li><b>AAEON 參考架構</b>——在 MAXER-5100 推論伺服器(雙 NVIDIA RTX PRO 4000 Blackwell SFF GPU)上驗證,採 NVIDIA Isaac Sim 參考框架(Computex 2026)。有公開紀錄、可重現。</li>
+        <li><b>NVIDIA Inception 成員</b>——持續的技術與市場拓展支持。</li>
+        <li><b>邊緣部署</b>——輕量 VideoPose 變體在 MemryX MX3 邊緣加速器上以 60 fps 運行。</li>
+        <li><b>已公開專利</b>——兩段式神經網路加 Ceres Solver 數值最佳化:單張 2D 影像解出 3D 全域姿態。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPARISON ================= -->
+<section class="rt cmp-dark" id="compare">
+  <div class="wrap">
+    <p class="kicker">03 &middot; 捕捉方法怎麼選</p>
+    <h2>2026 年部署方案的誠實比較。</h2>
+
+    <div class="tblwrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">評估項目</th>
+            <th scope="col">光學式(標記)</th>
+            <th scope="col">慣性式(IMU 動捕衣)</th>
+            <th class="neo" scope="col">Neocore RT(無標記 AI)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="crit" scope="row">絕對精度</th>
+            <td>次毫米——同級最佳</td>
+            <td>關節角度優異;絕對位置會漂移</td>
+            <td class="neo">公分級——足以應付多數機器人學習任務</td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">手部與手指細節</th>
+            <td>受限——遮蔽與標記密度問題</td>
+            <td>需外掛手套</td>
+            <td class="neo"><b>單手 27 關節,原生支援</b></td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">架設與校正</th>
+            <td>專用捕捉空間;標記點 + 每場次校正</td>
+            <td>穿脫動捕衣、IMU 校正、每場次磁場檢查</td>
+            <td class="neo">標準 RGB 攝影機;數分鐘完成場地校正</td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">受試者負擔</th>
+            <td>緊身衣 + 標記點</td>
+            <td>IMU 衣 + 線材</td>
+            <td class="neo"><b>便服;零穿戴</b></td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">環境彈性</th>
+            <td>限攝影棚</td>
+            <td>室內 / 室外 / 廠房</td>
+            <td class="neo">室內;依賴光照與攝影機視線</td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">即時延遲</th>
+            <td>低(依系統而定)</td>
+            <td>~20 ms——同級最佳</td>
+            <td class="neo">&lt;250 ms 端到端</td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">建置 + 持有成本</th>
+            <td>最高——攝影機、軟體、空間改裝</td>
+            <td>中至中高——動捕衣、手套、校正</td>
+            <td class="neo"><b>最低</b>——RGB 攝影機 + 邊緣運算盒 + 軟體</td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">最適用途</th>
+            <td>生物力學研究;電影級 VFX</td>
+            <td>非結構化環境的遙操作</td>
+            <td class="neo">可規模化的 Physical AI 資料集;多演員工業捕捉</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cmp-foot">請把這張表當成選型指南,而不是排行榜。步態病理研究仍該用光學;災難現場的四足機器人仍該用 IMU。Neocore RT 為組裝工作站、微型工廠與受控工業環境的 Physical AI 訓練資料而設計。</p>
+  </div>
+</section>
+
+<!-- ================= EVALUATION PATH ================= -->
+<section class="rt" id="evaluate">
+  <div class="wrap">
+    <p class="kicker">04 &middot; 評估路徑</p>
+    <h2>從疑問到部署,五步。</h2>
+
+    <ol class="eval">
+      <li><div><b>定義資料需求</b><p>模仿學習、遙操作或安全驗證——精度與延遲需求各不相同。</p></div></li>
+      <li><div><b>場地勘查</b><p>捕捉空間、光照一致性、攝影機配置;光照仍是關鍵。</p></div></li>
+      <li><div><b>一日 pilot</b><p>你的操作員、你的任務。交付:來自你環境的真實骨架資料。</p></div></li>
+      <li><div><b>格式驗證</b><p>串流餵入 Isaac Sim、ROS、MuJoCo 或自有管線;重定向到你的機器人運動學。</p></div></li>
+      <li><div><b>採購與部署</b><p>硬體參考(AAEON 或同級)、軟體授權、校正支援、捕捉節奏。</p></div></li>
+    </ol>
+
+    <div class="cta-row">
+      <a class="btn btn-rt" href="mailto:info@zukunftworks.co?subject=Neocore%20RT%20evaluation">申請評估<small>用你的操作員、你的任務做 pilot 捕捉</small></a>
+      <p class="cta-note">價格由 Zukunft Works Ltd. 詢價提供。典型評估從一日 pilot 開始:在你的環境、你的任務、你的操作員身上,取得真實骨架資料。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-cta">
+      <div>
+        <h2>從一日 pilot 開始。</h2>
+        <p>評估、pilot 與採購——大中華與東南亞。來信請附上你的使用情境(捕捉空間、操作員數、目標管線),我們會回覆具體的評估路徑。</p>
+      </div>
+      <div class="btns">
+        <a class="btn btn-rt" href="mailto:info@zukunftworks.co?subject=Neocore%20RT%20evaluation">來信 info@zukunftworks.co</a>
+        <a class="mail" href="mailto:info@zukunftworks.co?subject=Neocore%20RT%20evaluation">info@zukunftworks.co</a>
+      </div>
+    </div>
+    <div class="foot-meta">
+      <div class="brands">
+        <b>Red Pill Lab</b> &mdash; 開發商(台灣)<br>
+        <b>Zukunft Works Ltd.</b> &mdash; 經銷商(台北)<br>
+        &copy; 2026 Red Pill Lab &middot; Zukunft Works Ltd.
+      </div>
+      <div class="legal">
+        NVIDIA、Isaac Sim、Computex、GTC、AAEON、MemryX 及其他所有第三方名稱皆為各所有者之財產,文中提及僅為描述有公開紀錄的展示與整合。市場數字出處為 Omdia。規格依據 Neocore RT Procurement &amp; Integration Brief(2026 年 6 月)。
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
