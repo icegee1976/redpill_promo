@@ -3,12 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex">
 <title>Neocore RT — Motion Data for Physical AI | Red Pill Lab</title>
-<meta name="description" content="Neocore RT: markerless motion capture for Physical AI training data and humanoid teleoperation. Full page in preparation.">
+<meta name="description" content="Neocore RT: markerless RGB motion capture for humanoid robot training and teleoperation. 27-joint hand tracking, &lt;250 ms end-to-end latency, street clothes, skeleton-only privacy mode. Distributed by Zukunft Works Ltd.">
+<meta property="og:title" content="Neocore RT — Motion Data for Physical AI">
+<meta property="og:description" content="Markerless RGB motion capture for humanoid robot training and teleoperation. 27-joint hands, &lt;250 ms end-to-end latency, operators in street clothes.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Neocore — Red Pill Lab">
+<!-- workers.dev deployment; swap the host if a custom domain lands (HANDOFF §8 #4). og:image pending visual asset. -->
+<meta property="og:url" content="https://neocore.agneng.workers.dev/en/neocore-rt/">
+<link rel="canonical" href="https://neocore.agneng.workers.dev/en/neocore-rt/">
+<link rel="alternate" hreflang="en" href="https://neocore.agneng.workers.dev/en/neocore-rt/">
+<link rel="alternate" hreflang="x-default" href="https://neocore.agneng.workers.dev/en/neocore-rt/">
 <link rel="stylesheet" href="../../assets/site.css">
 </head>
-<body class="stub-dark">
+<body>
 
 <header class="topbar">
   <div class="wrap">
@@ -22,22 +30,202 @@
   </div>
 </header>
 
-<main class="stub-main">
+<!-- ================= PAGE HEAD ================= -->
+<section class="rt rt-page-head" id="top">
   <div class="wrap">
-    <span class="notice">Page under construction</span>
     <p class="kicker">Neocore RT &middot; For Physical AI &amp; Robotics Teams</p>
-    <h2>The bottleneck in Physical AI is motion data. Collect it without suits.</h2>
-    <p class="lede">Markerless motion capture for robot training datasets and humanoid teleoperation &mdash; operators in street clothing, standard RGB cameras. The full page (specifications, recognition, honest comparison, evaluation path) is in preparation.</p>
-    <div class="cta-row">
-      <a class="btn btn-rt" href="mailto:info@zukunftworks.co?subject=Neocore%20RT%20evaluation">Request an evaluation</a>
-      <a class="backlink" href="../">&larr; Back to overview</a>
+    <h1>The bottleneck in Physical AI is motion data. Collect it without suits.</h1>
+    <p class="lede">Omdia counts roughly 13,000 humanoid robots shipped worldwide in 2025 and projects 2.6 million units a year by 2035. What limits that curve is no longer compute &mdash; it is how fast teams can feed real-world motion into imitation learning and teleoperation pipelines. Neocore RT captures that motion from standard RGB cameras, with operators in <em>street clothes behaving like real workers</em>, not suited-up rehearsers.</p>
+
+    <div class="audience">
+      <div class="aud-card">
+        <h3>Robot training datasets</h3>
+        <p>Multi-camera, multi-actor capture in a real assembly cell. The same gesture, captured across dozens of operators and sessions, at near-zero subject burden &mdash; the throughput that imitation learning is starved of.</p>
+      </div>
+      <div class="aud-card">
+        <h3>Humanoid teleoperation</h3>
+        <p>An operator in street clothing drives a humanoid in real time, as demonstrated at NVIDIA GTC Taipei 2026. The skeleton stream retargets to your robot&rsquo;s kinematic model.</p>
+      </div>
     </div>
   </div>
-</main>
+</section>
 
+<!-- ================= SPECIFICATIONS ================= -->
+<section class="rt" id="specs">
+  <div class="wrap">
+    <p class="kicker">01 &middot; Specifications</p>
+    <h2>Six numbers that matter on a robotics floor.</h2>
+
+    <div class="specgrid six">
+      <div class="spec">
+        <div class="num">27<span>-joint</span></div>
+        <div class="lbl"><b>Native finger tracking per hand</b> &mdash; hand detail built into the core system; no glove add-on. Finger-level demonstration data for dexterity learning.</div>
+      </div>
+      <div class="spec">
+        <div class="num">&lt;250<span> ms</span></div>
+        <div class="lbl"><b>End-to-end teleoperation latency</b> &mdash; from camera to robot control loop, with zero gear on the operator.</div>
+      </div>
+      <div class="spec">
+        <div class="num">cm<span>-class</span></div>
+        <div class="lbl"><b>Absolute position accuracy</b> &mdash; sufficient for most robotic learning tasks. If you need sub-millimetre, optical still wins; see the comparison below.</div>
+      </div>
+      <div class="spec">
+        <div class="num">multi<span> cam &times; actor</span></div>
+        <div class="lbl"><b>Multi-camera, multi-actor capture</b> &mdash; validated in the AAEON Computex 2026 reference design.</div>
+      </div>
+      <div class="spec">
+        <div class="num">0<span> wearables</span></div>
+        <div class="lbl"><b>Street clothing only</b> &mdash; standard RGB cameras, minutes-class room calibration.</div>
+      </div>
+      <div class="spec">
+        <div class="num">Skeleton<span>-only output</span></div>
+        <div class="lbl"><b>Privacy mode</b> &mdash; raw video can be discarded at the edge; the anonymised skeleton stream persists.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VALIDATION ================= -->
+<section class="rt" id="validation">
+  <div class="wrap">
+    <p class="kicker">02 &middot; Validation</p>
+    <h2>Publicly documented, as of June 2026.</h2>
+
+    <div class="claim">
+      <p>The only markerless mocap brand to date featured in back-to-back NVIDIA keynote moments &mdash; the Computex 2025 launch and the GTC Taipei 2026 opening.</p>
+      <p class="src">As seen at the NVIDIA Computex 2025 keynote and the NVIDIA GTC Taipei 2026 opening keynote (June 2026) &mdash; both publicly documented.</p>
+    </div>
+
+    <div class="proof">
+      <h3>Recognition &amp; validated integrations</h3>
+      <ul>
+        <li><b>NVIDIA Computex 2025</b> &mdash; Neocore RT unveiled at the keynote opening.</li>
+        <li><b>NVIDIA GTC Taipei 2026</b> &mdash; featured in the opening keynote video (June 2026).</li>
+        <li><b>AAEON reference design</b> &mdash; validated on the MAXER-5100 inference server with dual NVIDIA RTX PRO 4000 Blackwell SFF GPUs, built with the NVIDIA Isaac Sim reference framework (Computex 2026). Publicly documented and reproducible.</li>
+        <li><b>NVIDIA Inception member</b> &mdash; ongoing technical and go-to-market support.</li>
+        <li><b>Edge deployment</b> &mdash; lightweight VideoPose variant runs at 60 fps on a MemryX MX3 edge accelerator.</li>
+        <li><b>Published patent</b> &mdash; two-stage neural network plus Ceres Solver numerical optimisation: 3D global pose from a single 2D image.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPARISON ================= -->
+<section class="rt cmp-dark" id="compare">
+  <div class="wrap">
+    <p class="kicker">03 &middot; Choosing a capture method</p>
+    <h2>An honest comparison of 2026 deployments.</h2>
+
+    <div class="tblwrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Criterion</th>
+            <th scope="col">Optical (marker)</th>
+            <th scope="col">Inertial (IMU suit)</th>
+            <th class="neo" scope="col">Neocore RT (markerless AI)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="crit" scope="row">Absolute accuracy</th>
+            <td>Sub-millimetre &mdash; best in class</td>
+            <td>Joint angles excellent; absolute position drifts</td>
+            <td class="neo">Centimetre-class &mdash; sufficient for most robotic learning tasks</td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">Hand &amp; finger detail</th>
+            <td>Limited &mdash; occlusion and marker density</td>
+            <td>Requires add-on gloves</td>
+            <td class="neo"><b>27-joint per hand, native</b></td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">Setup &amp; calibration</th>
+            <td>Dedicated capture volume; markers + per-session calibration</td>
+            <td>Suit donning, IMU calibration, per-session magnetic check</td>
+            <td class="neo">Standard RGB cameras; minutes-class room calibration</td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">Subject burden</th>
+            <td>Tight suit + markers</td>
+            <td>IMU suit + cabling</td>
+            <td class="neo"><b>Street clothes; no wearables</b></td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">Environmental flexibility</th>
+            <td>Studio-bound</td>
+            <td>Indoor / outdoor / factory floor</td>
+            <td class="neo">Indoor; lighting and camera sightline dependent</td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">Real-time latency</th>
+            <td>Low (system-dependent)</td>
+            <td>~20 ms &mdash; best in class</td>
+            <td class="neo">&lt;250 ms end-to-end</td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">Capital + ongoing cost</th>
+            <td>Highest &mdash; cameras, software, room build-out</td>
+            <td>Mid to mid-high &mdash; suits, gloves, calibration</td>
+            <td class="neo"><b>Lowest</b> &mdash; RGB cameras + edge box + software</td>
+          </tr>
+          <tr>
+            <th class="crit" scope="row">Best fit</th>
+            <td>Biomechanics research; cinematic VFX</td>
+            <td>Teleoperation in unstructured environments</td>
+            <td class="neo">Scalable Physical AI datasets; multi-actor industrial capture</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cmp-foot">Read this as a selection guide, not a leaderboard. Gait-pathology research still belongs on optical; a quadruped in a disaster site still belongs on IMU. Neocore RT is built for Physical AI training data in assembly cells, micro-factories and controlled industrial environments.</p>
+  </div>
+</section>
+
+<!-- ================= EVALUATION PATH ================= -->
+<section class="rt" id="evaluate">
+  <div class="wrap">
+    <p class="kicker">04 &middot; Evaluation path</p>
+    <h2>Five steps from question to deployment.</h2>
+
+    <ol class="eval">
+      <li><div><b>Define the data requirement</b><p>Imitation learning, teleoperation, or safety validation &mdash; precision and latency needs differ.</p></div></li>
+      <li><div><b>Site survey</b><p>Capture volume, lighting consistency, camera placement; lighting still matters.</p></div></li>
+      <li><div><b>One-day pilot</b><p>Your operators, your task. Deliverable: real skeleton data from your environment.</p></div></li>
+      <li><div><b>Format validation</b><p>Stream feeds Isaac Sim, ROS, MuJoCo or in-house pipelines; retargets to your robot&rsquo;s kinematics.</p></div></li>
+      <li><div><b>Procure &amp; deploy</b><p>Hardware reference (AAEON or equivalent), software licence, calibration support, capture cadence.</p></div></li>
+    </ol>
+
+    <div class="cta-row">
+      <a class="btn btn-rt" href="mailto:info@zukunftworks.co?subject=Neocore%20RT%20evaluation">Request an evaluation<small>Pilot capture with your operators, your task</small></a>
+      <p class="cta-note">Pricing is by quotation through Zukunft Works Ltd. A typical evaluation starts with a one-day pilot: real skeleton data captured in your environment, on your task, with your operators.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
 <footer>
-  <div class="wrap foot-mini">
-    &copy; 2026 Red Pill Lab &middot; Zukunft Works Ltd. &mdash; <a href="mailto:info@zukunftworks.co">info@zukunftworks.co</a>
+  <div class="wrap">
+    <div class="foot-cta">
+      <div>
+        <h2>Start with a one-day pilot.</h2>
+        <p>Evaluation, pilot and procurement &mdash; Greater China &amp; Southeast Asia. Write with your use case (capture space, operator count, target pipeline) and get a concrete evaluation path back.</p>
+      </div>
+      <div class="btns">
+        <a class="btn btn-rt" href="mailto:info@zukunftworks.co?subject=Neocore%20RT%20evaluation">Email info@zukunftworks.co</a>
+        <a class="mail" href="mailto:info@zukunftworks.co?subject=Neocore%20RT%20evaluation">info@zukunftworks.co</a>
+      </div>
+    </div>
+    <div class="foot-meta">
+      <div class="brands">
+        <b>Red Pill Lab</b> &mdash; developer, Taiwan<br>
+        <b>Zukunft Works Ltd.</b> &mdash; distributor, Taipei<br>
+        &copy; 2026 Red Pill Lab &middot; Zukunft Works Ltd.
+      </div>
+      <div class="legal">
+        NVIDIA, Isaac Sim, Computex, GTC, AAEON, MemryX and all other third-party names are the property of their respective owners, referenced only to describe documented demonstrations and integrations. Market figures are attributed to Omdia. Specifications reflect the Neocore RT Procurement &amp; Integration Brief (June 2026).
+      </div>
+    </div>
   </div>
 </footer>
 

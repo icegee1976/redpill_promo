@@ -89,6 +89,41 @@ h2{font-size:32px;line-height:1.2;font-weight:800;letter-spacing:-.01em;max-widt
 .claim p{font-size:17px;font-weight:600;line-height:1.55}
 .claim .src{margin-top:8px;font-family:var(--mono);font-size:12px;color:var(--dark-muted);font-weight:400}
 
+/* ---------- RT product page ---------- */
+.rt-page-head{padding:72px 0 8px}
+.rt-page-head h1{font-size:40px;line-height:1.16;font-weight:800;letter-spacing:-.01em;max-width:22em}
+.rt-page-head .lede{color:var(--dark-muted)}
+.rt-page-head .lede em{color:var(--white);font-style:normal;font-weight:600}
+.audience{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.aud-card{background:var(--dark-panel);border:1px solid var(--dark-line);border-radius:10px;padding:22px 24px}
+.aud-card h3{font-size:15px;font-weight:700;margin-bottom:8px;color:var(--green)}
+.aud-card p{font-size:14px;color:var(--dark-muted)}
+.specgrid.six{grid-template-columns:repeat(3,1fr)}
+.proof{margin-top:40px}
+.proof h3{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--dark-muted);margin-bottom:14px}
+.proof ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+.proof li{font-size:14px;color:var(--dark-muted);padding-left:18px;position:relative}
+.proof li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border:1.5px solid var(--green);border-radius:2px}
+.proof li b{color:var(--white);font-weight:600}
+/* dark comparison table (Lab Precision) */
+.cmp-dark .tblwrap{margin-top:36px;overflow-x:auto;background:var(--dark-panel);border:1px solid var(--dark-line);border-radius:12px}
+.cmp-dark table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:720px}
+.cmp-dark th,.cmp-dark td{padding:14px 18px;text-align:left;vertical-align:top;border-bottom:1px solid var(--dark-line)}
+.cmp-dark tr:last-child td{border-bottom:none}
+.cmp-dark thead th{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--dark-muted);background:#0D1319;font-weight:600}
+.cmp-dark thead th.neo{color:var(--green)}
+.cmp-dark th.crit{font-family:var(--sans);font-size:13.5px;letter-spacing:0;text-transform:none;background:transparent;font-weight:650;white-space:nowrap;color:var(--white)}
+.cmp-dark td{color:var(--dark-muted)}
+.cmp-dark td.neo{color:var(--white);background:rgba(0,229,160,.06)}
+.cmp-dark td.neo b{color:var(--green)}
+.cmp-dark .cmp-foot{margin-top:16px;font-size:13px;color:var(--dark-muted);max-width:52em}
+/* evaluation path */
+.eval{margin-top:36px;display:grid;gap:12px;counter-reset:step}
+.eval li{list-style:none;display:grid;grid-template-columns:44px 1fr;gap:16px;background:var(--dark-panel);border:1px solid var(--dark-line);border-radius:10px;padding:18px 20px;align-items:start}
+.eval li::before{counter-increment:step;content:counter(step);font-family:var(--mono);font-size:20px;font-weight:700;color:var(--green);border:1.5px solid var(--dark-line);border-radius:8px;width:40px;height:40px;display:flex;align-items:center;justify-content:center}
+.eval b{display:block;font-size:14.5px;color:var(--white);margin-bottom:3px}
+.eval p{font-size:13.5px;color:var(--dark-muted)}
+
 /* ---------- Neocore teaser (light) ---------- */
 .std{background:var(--light-bg);color:var(--charcoal)}
 .std .kicker{color:var(--red)}
@@ -143,6 +178,10 @@ footer{background:var(--dark-bg);color:var(--dark-muted);padding:72px 0 48px;bor
   .hero .wrap{grid-template-columns:1fr;gap:40px}
   .hero h1{font-size:36px}
   .specgrid{grid-template-columns:1fr 1fr}
+  .specgrid.six{grid-template-columns:1fr 1fr}
+  .audience{grid-template-columns:1fr}
+  .proof ul{grid-template-columns:1fr}
+  .rt-page-head h1{font-size:33px}
   .foot-cta{grid-template-columns:1fr}
 }
 @media(max-width:600px){
@@ -152,8 +191,11 @@ footer{background:var(--dark-bg);color:var(--dark-muted);padding:72px 0 48px;bor
   h2{font-size:26px}
   section{padding:60px 0}
   .specgrid{grid-template-columns:1fr}
+  .specgrid.six{grid-template-columns:1fr}
   .topnav{display:none}
   .stub-main{padding:80px 0 60px}
   .grid2{grid-template-columns:1fr}
   .fork{grid-template-columns:1fr}
+  .rt-page-head h1{font-size:28px}
+  .eval li{grid-template-columns:36px 1fr;gap:12px}
 }
