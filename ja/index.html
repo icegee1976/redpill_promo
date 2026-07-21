@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Neocore — Red Pill Lab マーカーレス・モーションキャプチャ</title>
-<meta name="description" content="Neocore:標準的なウェブカメラによるマーカーレスAIモーションキャプチャ。Neocore RTはPhysical AIとヒューマノイドロボット向け、NeocoreはVTuber事務所・バーチャルプロダクション・ゲームアニメーション向け。販売代理店:Zukunft Works Ltd.">
+<meta name="description" content="Neocore:標準的なウェブカメラによるマーカーレスAIモーションキャプチャ。VTuber事務所・バーチャルプロダクション・ゲームアニメーション向け。販売代理店:Zukunft Works Ltd.">
 <meta property="og:title" content="Neocore — Red Pill Lab マーカーレス・モーションキャプチャ">
-<meta property="og:description" content="リアルタイムAIモーションキャプチャ——スーツもマーカーもグローブも不要。Neocore RTはPhysical AI向け、NeocoreはVTuber事務所・バーチャルプロダクション・ゲームアニメーション向け。">
+<meta property="og:description" content="リアルタイムAIモーションキャプチャ——スーツもマーカーもグローブも不要。VTuber事務所・バーチャルプロダクション・ゲームアニメーション向け。">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Neocore — Red Pill Lab">
 <!-- workers.dev deployment; swap the host if a custom domain lands (HANDOFF §8 #4). -->
@@ -29,7 +29,6 @@
   <div class="wrap">
     <a class="wordmark" href="./">NEO<span>CORE</span></a>
     <nav class="topnav">
-      <a href="neocore-rt/">Neocore RT</a>
       <a href="neocore/">Neocore</a>
       <a class="contact" href="mailto:info@zukunftworks.co">info@zukunftworks.co</a>
     </nav>
@@ -46,10 +45,9 @@
   <div class="wrap">
     <div>
       <p class="eyebrow">Red Pill Lab &middot; マーカーレス・モーションキャプチャ</p>
-      <h1>数台のウェブカメラで、リアルな人間の動きをキャプチャ——ゲームエンジンからヒューマノイドロボットまで。</h1>
+      <h1>数台のウェブカメラで、リアルな人間の動きをキャプチャ。</h1>
       <p class="sub">Neocoreはリアルタイムのモーションキャプチャ。<strong>スーツもマーカーもグローブも不要</strong>。演者は普段着のまま、標準的なRGBカメラとRTXワークステーション1台でトラッキングします。</p>
       <div class="fork">
-        <a class="fork-card fork-rt" href="neocore-rt/"><b>Neocore RT <span class="arr">&rarr;</span></b><small>Physical AIのための訓練データとテレオペレーション</small></a>
         <a class="fork-card fork-std" href="neocore/"><b>Neocore <span class="arr">&rarr;</span></b><small>VTuber事務所・バーチャルプロダクション・ゲームアニメーション</small></a>
       </div>
     </div>
@@ -57,44 +55,6 @@
       <!-- demo-video slot (004 SPEC #7): replace this img with a local <video> when approved footage exists -->
       <img src="../assets/og/og-home.png" alt="" width="1200" height="630">
     </figure>
-  </div>
-</section>
-
-<!-- ================= NEOCORE RT TEASER ================= -->
-<section class="rt" id="rt">
-  <div class="wrap">
-    <p class="kicker">Neocore RT &middot; Physical AI &amp; ロボティクスチーム向け</p>
-    <h2>Physical AIのボトルネックはモーションデータ。スーツなしで収集する。</h2>
-    <p class="lede">Neocore RTは、標準的なRGBカメラで捉えた実世界の動きを模倣学習とテレオペレーションのパイプラインへ送り込みます。オペレーターは<em>普段着のまま、実際の作業者として振る舞います</em>——タイトスーツを着たリハーサル要員ではなく。</p>
-
-    <div class="specgrid">
-      <div class="spec">
-        <div class="num">27<span> 関節</span></div>
-        <div class="lbl"><b>片手あたりのネイティブ指トラッキング</b>——システム中核に組み込み。グローブの後付けは不要。器用さ学習のための指レベルのデモンストレーションデータ。</div>
-      </div>
-      <div class="spec">
-        <div class="num">&lt;250<span> ms</span></div>
-        <div class="lbl"><b>エンドツーエンドのテレオペレーション遅延</b>——カメラからロボット制御ループまで、オペレーターの装着物ゼロ。</div>
-      </div>
-      <div class="spec">
-        <div class="num">cm<span> 級</span></div>
-        <div class="lbl"><b>絶対位置精度</b>——多くのロボット学習タスクに十分。サブミリが必要なら光学式が依然として最適。</div>
-      </div>
-      <div class="spec">
-        <div class="num">Skeleton<span>-only 出力</span></div>
-        <div class="lbl"><b>プライバシーモード</b>——匿名化された骨格ストリームのみを出力。生映像はエッジで破棄可能、コンプライアンス用途に。</div>
-      </div>
-    </div>
-
-    <div class="claim">
-      <p>NVIDIA keynoteに2年連続で登場した、現時点で唯一のマーカーレス・モーションキャプチャブランド——Computex 2025での発表とGTC Taipei 2026のオープニング。</p>
-      <p class="src">NVIDIA Computex 2025 keynoteおよびNVIDIA GTC Taipei 2026オープニングkeynote(2026年6月)にて——いずれも公開記録あり。</p>
-    </div>
-
-    <div class="cta-row">
-      <a class="btn btn-rt" href="neocore-rt/">Neocore RTを詳しく<small>仕様・実績・評価パス</small></a>
-      <p class="cta-note">評価は通常、1日のパイロットから始まります:貴社の環境・タスク・オペレーターで、実スケルトンデータを取得。</p>
-    </div>
   </div>
 </section>
 
@@ -121,11 +81,11 @@
     <div class="foot-cta">
       <div>
         <h2>Neocoreを実際に見る。</h2>
-        <p>台北のZukunft Works Ltd.を通じて1時間のオンラインデモを予約——ご希望の時間を選べば、返信で確定します。Neocore RTの評価をご検討なら、ユースケース(キャプチャ空間・オペレーター数・対象パイプライン)を添えてご連絡ください。具体的な評価パスをご返信します。価格は見積もり制です。</p>
+        <p>台北のZukunft Works Ltd.を通じて1時間のオンラインデモを予約——ご希望の時間を選べば、返信で確定します。または、スペース・キャストの人数・対象エンジンを添えてご連絡いただければ、カメラ配置案とお見積もりをご返信します。価格は見積もり制です。</p>
       </div>
       <div class="btns">
         <a class="btn btn-red" href="demo/">1時間のNeocoreデモを予約</a>
-        <a class="mail" href="mailto:info@zukunftworks.co?subject=Neocore%20RT%20evaluation">Neocore RTの評価・見積もり &mdash; info@zukunftworks.co</a>
+        <a class="mail" href="mailto:info@zukunftworks.co?subject=Neocore%20quote%20request">お見積もり &mdash; info@zukunftworks.co</a>
       </div>
     </div>
     <div class="foot-meta">
@@ -135,7 +95,7 @@
         &copy; 2026 Red Pill Lab &middot; Zukunft Works Ltd.
       </div>
       <div class="legal">
-        NVIDIA、Unreal Engine、Unity、Warudoは各所有者の商標です。本文中の言及は公開記録のあるデモンストレーションおよびインテグレーションの説明のみを目的とし、いかなる推奨も意味しません。仕様はNeocore導入ガイドおよびNeocore RT Procurement &amp; Integration Brief(2026年6月)に基づきます。<br>
+        NVIDIA、Unreal Engine、Unity、Warudoは各所有者の商標です。本文中の言及は公開記録のあるデモンストレーションおよびインテグレーションの説明のみを目的とし、いかなる推奨も意味しません。仕様はNeocore導入ガイドに基づきます。<br>
         本日本語版は英語版からの翻訳ドラフトであり、ネイティブスピーカーによる校閲を予定しています。
       </div>
     </div>
