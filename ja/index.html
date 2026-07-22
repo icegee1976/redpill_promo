@@ -29,7 +29,9 @@
   <div class="wrap">
     <a class="wordmark" href="./">NEO<span>CORE</span></a>
     <nav class="topnav">
-      <a href="neocore/">Neocore</a>
+      <a href="#videos">動画</a>
+      <a href="#specs">仕様</a>
+      <a href="#pipeline">パイプライン</a>
       <a class="contact" href="mailto:info@zukunftworks.co">info@zukunftworks.co</a>
     </nav>
     <nav class="lang-switch" aria-label="言語">
@@ -47,8 +49,9 @@
       <p class="eyebrow">Red Pill Lab &middot; マーカーレス・モーションキャプチャ</p>
       <h1>数台のウェブカメラで、リアルな人間の動きをキャプチャ。</h1>
       <p class="sub">Neocoreはリアルタイムのモーションキャプチャ。<strong>スーツもマーカーもグローブも不要</strong>。演者は普段着のまま、標準的なRGBカメラとRTXワークステーション1台でトラッキングします。</p>
-      <div class="fork">
-        <a class="fork-card fork-std" href="neocore/"><b>Neocore <span class="arr">&rarr;</span></b><small>VTuber事務所・バーチャルプロダクション・ゲームアニメーション</small></a>
+      <div class="cta-row">
+        <a class="btn btn-red" href="demo/">1時間のデモを予約<small>ご希望の時間を選択——返信で確定します</small></a>
+        <a class="backlink" href="#videos">実際の映像 &darr;</a>
       </div>
     </div>
     <figure class="hero-art" aria-hidden="true">
@@ -58,19 +61,111 @@
   </div>
 </section>
 
-<!-- ================= NEOCORE TEASER ================= -->
-<section class="std" id="neocore">
+<section class="std" id="videos">
   <div class="wrap">
-    <p class="kicker">Neocore &middot; VTuber事務所・バーチャルプロダクション・ゲームアニメーション向け</p>
-    <h2>ウェアラブルなし、マーカーなし。数台のウェブカメラと1台のPCで、キャスト全員を。</h2>
-    <p class="lede">複数の演者が同じステージに立つチームのために——3DライブをするVTuber事務所、バーチャルプロダクションスタジオ、ゲームアニメーションチーム。演者は<em>来た服のまま</em>。1つの部屋と1台のワークステーションでキャスト全員をキャプチャします。</p>
+    <p class="kicker">01 &middot; 実際の映像</p>
+    <h2>Neocoreがキャストをキャプチャする様子を見る。</h2>
 
-    <p class="recipe">ウェブカメラ 5&ndash;6台 <span>+</span> RTXワークステーション 1台 <span>=</span> 3&ndash;4名のリアルタイムモーションキャプチャ</p>
-    <p class="pipe-line"><b>Take Recorder &rarr; FBX書き出し</b> &middot; <b>LiveLink &rarr; Unreal Engine 5</b> &middot; <b>Unityプラグイン</b>(com.redpill.neocore)&middot; <b>Warudoプラグイン</b></p>
+    <!-- click-to-play:ページ読み込み時の外部リクエストはゼロ。クリック時のみyoutube-nocookie iframeを注入。JSなしでは通常のリンク -->
+    <div class="videos shorts">
+      <a class="video-slot" data-yt="sBIOTu2mqzE" href="https://youtube.com/shorts/sBIOTu2mqzE" aria-label="NeoCore Promo(YouTube Short)">
+        <span class="play" aria-hidden="true"></span>
+        <span class="vlabel">NeoCore Promo &middot; YouTube Short</span>
+      </a>
+      <a class="video-slot" data-yt="5kNGk1lKg2Q" href="https://youtube.com/shorts/5kNGk1lKg2Q" aria-label="Neocore + CamVerse(YouTube Short)">
+        <span class="play" aria-hidden="true"></span>
+        <span class="vlabel">Neocore + CamVerse &middot; YouTube Short</span>
+      </a>
+      <a class="video-slot" data-yt="bYc2-5gICmw" href="https://youtube.com/shorts/bYc2-5gICmw" aria-label="Neocore in Unreal Engine(YouTube Short)">
+        <span class="play" aria-hidden="true"></span>
+        <span class="vlabel">Neocore in Unreal Engine &middot; YouTube Short</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="std" id="specs">
+  <div class="wrap">
+    <p class="kicker">02 &middot; レシピ</p>
+    <h2>1つの部屋、1台のワークステーション、キャスト全員。</h2>
+    <p class="lede">Neocoreは、1つの部屋と5〜6台の1080pウェブカメラ、1台のRTXワークステーションを、複数人対応のモーションキャプチャステージに変えます。演者は<em>来た服のまま</em>。カメラを設置し、ガイド付き校正を実行すれば、テイクの収録を開始できます——カメラを動かさない限り、保存したプロジェクトは再校正なしでそのまま再開できます。</p>
+
+    <div class="std-grid">
+      <div>
+        <p class="recipe">ウェブカメラ 5&ndash;6台 <span>+</span> RTXワークステーション 1台 <span>=</span> 3&ndash;4名のリアルタイムモーションキャプチャ</p>
+        <div class="stdspecs">
+          <div class="stdspec"><div class="k">カメラ</div><div class="v"><b>1080p / 60 fpsウェブカメラ 5&ndash;6台</b>(6台推奨)、FOV 90&deg;&ndash;110&deg;、高さ約2mでやや下向きに設置。主要ブランドであれば使用可能。公式推奨モデルはAverMedia PW315。</div></div>
+          <div class="stdspec"><div class="k">スペース</div><div class="v"><b>基準は約5 &times; 5 m</b>、演者3&ndash;4名。公式テスト上限は<b>10 &times; 10 m・演者8名</b>(カメラと計算リソースの追加が必要)。</div></div>
+          <div class="stdspec"><div class="k">ワークステーション</div><div class="v"><b>Intel i7 第13世代以上、NVIDIA RTX 4070以上、32 GB RAM。</b>1台のマシンでシステム全体が動作。</div></div>
+          <div class="stdspec"><div class="k">初回起動</div><div class="v">TensorRTの自動チューニング、5&ndash;10分、初回のみ。以降は起動後すぐ使用可能。</div></div>
+        </div>
+      </div>
+      <div class="std-art" aria-hidden="true">
+        <svg viewBox="0 0 440 420" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#E0312B" opacity=".06">
+            <path d="M78 96 L250 176 L160 262 Z"/>
+            <path d="M362 96 L190 176 L280 262 Z"/>
+            <path d="M78 324 L250 244 L160 158 Z"/>
+            <path d="M362 324 L190 244 L280 158 Z"/>
+            <path d="M220 66 L150 240 L290 240 Z"/>
+            <path d="M220 354 L150 180 L290 180 Z"/>
+          </g>
+          <g stroke="#D8CFC2" stroke-width="1" fill="none">
+            <rect x="90" y="108" width="260" height="204" rx="2"/>
+            <line x1="155" y1="108" x2="155" y2="312"/><line x1="220" y1="108" x2="220" y2="312"/><line x1="285" y1="108" x2="285" y2="312"/>
+            <line x1="90" y1="159" x2="350" y2="159"/><line x1="90" y1="210" x2="350" y2="210"/><line x1="90" y1="261" x2="350" y2="261"/>
+          </g>
+          <g font-family="ui-monospace,Consolas,monospace" font-size="12" fill="#6E6862">
+            <text x="205" y="336">~5 m</text>
+            <text x="358" y="215" transform="rotate(90 358 215)">~5 m</text>
+          </g>
+          <g fill="#FFFFFF" stroke="#E0312B" stroke-width="1.6">
+            <g transform="rotate(45 78 96)"><rect x="63" y="87" width="30" height="18" rx="4"/><circle cx="87" cy="96" r="4"/></g>
+            <g transform="rotate(135 362 96)"><rect x="347" y="87" width="30" height="18" rx="4"/><circle cx="371" cy="96" r="4"/></g>
+            <g transform="rotate(-45 78 324)"><rect x="63" y="315" width="30" height="18" rx="4"/><circle cx="87" cy="324" r="4"/></g>
+            <g transform="rotate(-135 362 324)"><rect x="347" y="315" width="30" height="18" rx="4"/><circle cx="371" cy="324" r="4"/></g>
+            <g transform="rotate(90 220 66)"><rect x="205" y="57" width="30" height="18" rx="4"/><circle cx="229" cy="66" r="4"/></g>
+            <g transform="rotate(-90 220 354)"><rect x="205" y="345" width="30" height="18" rx="4"/><circle cx="229" cy="354" r="4"/></g>
+          </g>
+          <g stroke="#E0312B" stroke-width="1.8" stroke-linecap="round" fill="none">
+            <g transform="translate(165,160)"><circle cx="0" cy="-16" r="6"/><line x1="0" y1="-10" x2="0" y2="10"/><line x1="-9" y1="-4" x2="9" y2="-4"/><line x1="-6" y1="10" x2="-8" y2="24"/><line x1="6" y1="10" x2="8" y2="24"/></g>
+            <g transform="translate(268,196)"><circle cx="0" cy="-16" r="6"/><line x1="0" y1="-10" x2="0" y2="10"/><line x1="-9" y1="-4" x2="9" y2="-4"/><line x1="-6" y1="10" x2="-8" y2="24"/><line x1="6" y1="10" x2="8" y2="24"/></g>
+            <g transform="translate(196,262)"><circle cx="0" cy="-16" r="6"/><line x1="0" y1="-10" x2="0" y2="10"/><line x1="-9" y1="-4" x2="9" y2="-4"/><line x1="-6" y1="10" x2="-8" y2="24"/><line x1="6" y1="10" x2="8" y2="24"/></g>
+          </g>
+          <text x="90" y="392" font-family="ui-monospace,Consolas,monospace" font-size="11.5" fill="#6E6862">推奨6カメラ配置:四隅 + 前 + 後</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="std" id="pipeline">
+  <div class="wrap">
+    <p class="kicker">03 &middot; パイプライン</p>
+    <h2>テイクからエンジンまで、3つの経路。</h2>
+
+    <div class="pipe">
+      <div class="pipe-card">
+        <h3>収録と書き出し</h3>
+        <p><b>Take Recorder</b>がセッションを収録し、<b>FBX</b>を書き出し——標準的なアニメーション形式で、Unreal Engine、DCCツール、あらゆる制作パイプラインへそのまま持ち込めます。</p>
+      </div>
+      <div class="pipe-card">
+        <h3>ライブストリーミング</h3>
+        <p><b>LiveLink</b>が演者をリアルタイムで<b>Unreal Engine 5</b>へストリーミング。UE5 Mannequinスケルトンで届き、Animation Blueprintですぐ使えます。Zukunft Worksが自社開発したバーチャルプロダクションソフトウェア「CamVerse Studio」にも接続可能。</p>
+      </div>
+      <div class="pipe-card">
+        <h3>エンジンとVTuberアプリ</h3>
+        <p><b>Unityプラグイン</b>(com.redpill.neocore)がUnity内でNeocoreのモーションストリームを読み取り。<b>Warudoプラグイン</b>がVTuberワークフローをカバーします。</p>
+      </div>
+    </div>
+
+    <div class="straight">
+      <p><b>精度について率直に:</b>Neocoreの精度は光学式モーションキャプチャに及びません——その代わり、価格はハイエンド光学システムのおよそ10分の1です。VTuberのライブ配信、バーチャルプロダクション、ゲームアニメーションには、多くの場合これが妥当なトレードオフです。</p>
+    </div>
 
     <div class="cta-row">
-      <a class="btn btn-red" href="neocore/">Neocoreを詳しく<small>詳細仕様・パイプライン・正直な比較</small></a>
-      <p class="cta-note">公式テスト上限は 10 &times; 10 m・演者8名(カメラと計算リソースの追加が必要)——詳細は製品ページへ。</p>
+      <a class="btn btn-red" href="demo/">1時間のデモを予約<small>ご希望の時間を選択——返信で確定します</small></a>
+      <p class="cta-note">スペース、キャストの人数、対象エンジンをお知らせください——カメラ配置案とお見積もりをご返信します。</p>
     </div>
   </div>
 </section>
@@ -95,12 +190,35 @@
         &copy; 2026 Red Pill Lab &middot; Zukunft Works Ltd.
       </div>
       <div class="legal">
-        NVIDIA、Unreal Engine、Unity、Warudoは各所有者の商標です。本文中の言及は公開記録のあるデモンストレーションおよびインテグレーションの説明のみを目的とし、いかなる推奨も意味しません。仕様はNeocore導入ガイドに基づきます。<br>
+        NVIDIA、Intel、AverMedia、Unreal Engine、Unity、Warudoおよびその他すべての第三者名称は各所有者の財産であり、本文中の言及は公開記録のあるインテグレーションの説明のみを目的とし、いかなる推奨も意味しません。仕様はNeocore導入ガイドに基づきます。<br>
         本日本語版は英語版からの翻訳ドラフトであり、ネイティブスピーカーによる校閲を予定しています。
       </div>
     </div>
   </div>
 </footer>
+
+<script>
+/* Enhancement only: click-to-play YouTube embeds. Page load makes zero external requests;
+   a youtube-nocookie.com iframe is injected only when the visitor clicks an activated slot. */
+(function () {
+  var slots = document.querySelectorAll('.video-slot[data-yt]');
+  for (var i = 0; i < slots.length; i++) {
+    slots[i].addEventListener('click', function (e) {
+      var id = this.getAttribute('data-yt');
+      if (!id) { e.preventDefault(); return; }
+      e.preventDefault();
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture';
+      f.allowFullscreen = true;
+      f.title = this.getAttribute('aria-label') || 'Video';
+      this.innerHTML = '';
+      this.appendChild(f);
+      this.classList.add('playing');
+    });
+  }
+})();
+</script>
 
 </body>
 </html>
